@@ -33,6 +33,306 @@
   --color-whatsapp-hover: #00ac09;
 }
 
+/* Portfolio Section Styles */
+/* General Styles */
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.portfolio-section .container .section-header p {
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 1.2; /* Maintain line height */
+  margin: 0 auto 15px auto;
+  display: inline-block;
+  color: var(--color-secondary);
+  border-radius: 50px;
+  letter-spacing: 1px;
+}
+
+.portfolio-section .container .section-header h3 {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.4; /* Maintain line height */
+  color: #ffffff;
+  margin: 0 auto;
+}
+
+.section-header h3 span {
+  color: #7cda00;
+}
+
+/* Mobile Styles (max-width: 768px) */
+@media (max-width: 768px) {
+  .section-header h3 {
+    font-size: 22px; /* Smaller font for mobile */
+    line-height: 1.4; /* Maintain line height */
+    margin-bottom: 10px; /* Spacing adjustment */
+  }
+
+  .section-header p {
+    font-size: 18px; /* Smaller font for mobile */
+    line-height: 1.5; /* Improved line height for better spacing */
+    padding: 6px 16px;
+  }
+
+  /* Portfolio Section */
+  .portfolio-section {
+    padding: 4rem 1rem; /* Reduced padding for mobile */
+  }
+
+  .portfolio-title {
+    font-size: 2.5rem; /* Slightly smaller font size */
+    margin-bottom: 2rem; /* Adjusted bottom margin */
+    text-align: center;
+  }
+
+  /* Grid for smaller screens */
+  .projects-grid {
+    grid-template-columns: 1fr; /* Single column grid */
+    gap: 2rem; /* Adjust gap for mobile */
+  }
+
+  .project-card {
+    margin-bottom: 1.5rem; /* Reduced margin-bottom */
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Adjusted shadow for mobile */
+  }
+
+  /* Project Info */
+  .project-info {
+    padding: 1rem; /* Reduced padding */
+    line-height: 1.4; /* Maintain line height */
+  }
+
+  .project-title {
+    font-size: 1.4rem; /* Slightly smaller title font */
+    line-height: 1.5; /* Maintain line height */
+    color: var(--color-secondary);
+  }
+
+  .project-category {
+    font-size: 1rem; /* Adjusted font size */
+    line-height: 1.4; /* Consistent line height */
+    color: #fff;
+  }
+
+  /* Modal Styles */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    padding: 1rem;
+  }
+
+  .modal-content {
+    background-color: #0b0b0b;
+    padding: 1.5rem; /* Adjusted padding for mobile */
+    margin: 1rem; /* Reduced margin */
+    border-radius: 1.5rem;
+    width: 100%;
+    max-width: 700px; /* Reduced max-width */
+  }
+
+  .modal-image {
+    object-fit: cover;
+    width: 100%;
+    height: 200px; /* Adjusted image size for mobile */
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .modal-title {
+    font-size: 2rem; /* Adjusted title font size */
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+
+  .modal-category {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    color: #fff;
+  }
+
+  .modal-description {
+    font-size: 1rem; /* Adjusted description font size */
+    line-height: 1.5; /* Consistent line height */
+    color: #fff;
+  }
+
+  .close-button {
+    margin-top: 1.5rem;
+    background-color: #4409a3;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1rem; /* Reduced padding */
+    border-radius: 50px;
+    transition: background-color 0.3s;
+  }
+
+  .close-button:hover {
+    background-color: #300575;
+  }
+}
+
+/* Default styles for larger screens */
+.portfolio-section {
+  padding: 5rem 0;
+  background-color: var(--color-primary-1);
+  color: white;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.portfolio-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 4rem;
+  text-align: center;
+  color: var(--color-secondary);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr 1fr; /* Two columns on larger screens */
+  }
+}
+
+.project-item {
+  position: relative;
+  cursor: pointer;
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.project-image {
+  object-fit: cover;
+  width: 100%;
+  height: 400px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, black, transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 1.5rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .overlay {
+  opacity: 1;
+}
+
+.project-card:hover .project-info {
+  transform: translateY(0);
+}
+
+.project-title {
+  font-size: 1.5rem;
+  color: var(--color-secondary);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.project-category {
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  padding: 1rem;
+}
+
+.modal-content {
+  background-color: #0b0b0b;
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 1.5rem;
+  max-width: 800px;
+  width: 100%;
+}
+
+.modal-image {
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.modal-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: var(--color-secondary);
+}
+
+.modal-category {
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+.modal-description {
+  font-size: 1.125rem;
+  color: #fff;
+}
+
+.close-button {
+  margin-top: 1.5rem;
+  background-color: #4409a3;
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  transition: background-color 0.3s;
+}
+
+.close-button:hover {
+  background-color: #300575;
+}
+
 /* Our Team */
 
 .our-team {
@@ -154,7 +454,6 @@
 .hover-effect:hover {
   transform: scale(1.1);
 }
-
 
 /*--------------------------------------------------------------
 # General
@@ -1290,7 +1589,6 @@ section {
   color: var(--color-primary-1);
   text-align: left !important;
 }
-
 
 /*--------------------------------------------------------------
 # Testimonials Section
@@ -2689,7 +2987,6 @@ section {
   transform: translateX(10px); /* Move the icon 10px on the X-axis */
 }
 
-
 .hero .icon-boxes {
   padding-bottom: 70px;
 }
@@ -2837,7 +3134,6 @@ section {
     font-size: 14px;
   }
 }
-
 
 /*--------------------------------------------------------------
 # Hero-2 Call to Action
@@ -3333,22 +3629,18 @@ section {
   overflow-x: auto;
   gap: 10px;
   padding: 10px;
-  scroll-behavior: smooth; 
-  scrollbar-width: none; 
+  scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 
 .scroll-container::-webkit-scrollbar {
-  display: none; 
+  display: none;
 }
 
 .service-item {
-  flex: 0 0 auto; 
+  flex: 0 0 auto;
   text-align: center;
 }
-
-
-
-
 
 /*--------------------------------------------------------------
 # Footer
@@ -3724,7 +4016,8 @@ section {
 
 .about-3 .box-text:hover {
   background-color: #fff;
-  box-shadow: 13px 13px 51px 0px rgba(9.999999999999991, 50.99999999999997, 80, 0.16);
+  box-shadow: 13px 13px 51px 0px
+    rgba(9.999999999999991, 50.99999999999997, 80, 0.16);
 }
 
 .about-3 .box-text .box-area {
@@ -3902,8 +4195,6 @@ section {
     font-size: 12px;
   }
 }
-
-
 
 /* About 100 */
 
@@ -4115,7 +4406,6 @@ section {
   line-height: 45px;
   margin-bottom: 30px;
 }
-
 
 .about-4 .about-4-content {
   padding: 40px;
@@ -5600,7 +5890,7 @@ section {
   height: 100%;
   border-radius: 20px;
   transition: ease-in-out 0.3s;
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -5654,7 +5944,7 @@ section {
   width: 70px;
   height: 70px;
   position: relative;
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -5727,7 +6017,6 @@ section {
     margin-bottom: 20px;
   }
 }
-
 
 .layanan-kita .service-item:hover i {
   margin-left: 5px;
@@ -7462,7 +7751,6 @@ form.whatsapp-form {
     line-height: 1.6; /* Adjusted line height */
   }
 }
-
 
 /*--------------------------------------------------------------
 # boxes-hero

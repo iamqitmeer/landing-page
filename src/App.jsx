@@ -43,6 +43,7 @@ import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
 import AutoScrollIcons from "./components/AutoScrollIcons";
 import PauseOnHover from "./components/AutoScrollIcons";
+import PortfolioSection from "./components/PortfolioSection";
 const testimonials = [
   {
     name: "Client Name 1",
@@ -525,6 +526,8 @@ function App() {
           </div>
         </section>
 
+        <PortfolioSection />
+
         {/* End Why Us Section */}
         <section id="about-3" className="about-3">
           <div className="container" data-aos="fade-in">
@@ -665,14 +668,14 @@ function App() {
         </section>
 
         <section id="our-team" className="our-team">
-  <div className="container" data-aos="fade-in">
-    <div className="section-title-new" data-aos="fade-in">
-      <span className="heading">Meet Our Team</span>
-      <p className="subheading">
-        Bringing Ideas to Life with Passion and Dedication
-      </p>
-    </div>
-    <div className="row team-members gy-lg-4 gx-lg-4 gy-3 gx-2">
+          <div className="container" data-aos="fade-in">
+            <div className="section-title-new" data-aos="fade-in">
+              <span className="heading">Meet Our Team</span>
+              <p className="subheading">
+                Bringing Ideas to Life with Passion and Dedication
+              </p>
+            </div>
+            <div className="row team-members gy-lg-4 gx-lg-4 gy-3 gx-2">
               <div
                 className="col-md-6 col-lg-4 d-flex align-items-stretch mb-4"
                 data-aos="fade-up"
