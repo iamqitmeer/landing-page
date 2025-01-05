@@ -529,7 +529,7 @@ function App() {
         <PortfolioSection />
 
         {/* End Why Us Section */}
-        <section id="about-3" className="about-3">
+        {/* <section id="about-3" className="about-3">
           <div className="container" data-aos="fade-in">
             <div className="row no-gutters justify-content-between">
               <p
@@ -595,7 +595,7 @@ function App() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* What Our Clients Say */}
 
@@ -667,7 +667,7 @@ function App() {
           </div>
         </section>
 
-        <section id="our-team" className="our-team">
+        {/* <section id="our-team" className="our-team">
           <div className="container" data-aos="fade-in">
             <div className="section-title-new" data-aos="fade-in">
               <span className="heading">Meet Our Team</span>
@@ -784,7 +784,7 @@ function App() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* ======= Call To Action Section ======= */}
         <section id="hero-2" className="hero-2">
@@ -985,7 +985,7 @@ function App() {
                 </ul>
               </div>
 
-              <div className="col-lg-3 col-md-6 footer-blog" data-aos="fade-in">
+              {/* <div className="col-lg-3 col-md-6 footer-blog" data-aos="fade-in">
                 <h4>Our Latest Articles</h4>
                 <ul>
                   <li>
@@ -1012,14 +1012,14 @@ function App() {
                     <a href="#">Leveraging SEO to Boost Website Traffic</a>
                   </li>
                 </ul>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
 
         <div className="container">
           <div className="copyright">
-            © Copyright 2024 Zenth Solution™ - All Rights Reserved
+            © Copyright 2025 Zenth Solution™ - All Rights Reserved
           </div>
         </div>
       </footer>

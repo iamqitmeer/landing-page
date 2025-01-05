@@ -173,6 +173,8 @@
     font-weight: bold;
     padding: 0.5rem 1rem; /* Reduced padding */
     border-radius: 50px;
+    border: none;
+    outline: none;
     transition: background-color 0.3s;
   }
 
