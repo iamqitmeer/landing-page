@@ -67,9 +67,7 @@ const testimonials = [
 function Home() {
   const form = useRef();
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+ 
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -493,81 +491,7 @@ function Home() {
 
         <PortfolioSection />
 
-        {/* End Why Us Section */}
-        {/* <section id="about-3" className="about-3">
-          <div className="container" data-aos="fade-in">
-            <div className="row no-gutters justify-content-between">
-              <p
-                style={{
-                  fontSize: "44px",
-                  letterSpacing: "0.3px",
-                  fontWeight: "bolder",
-                  textAlign: "center",
-                  marginBottom: "40px",
-                  color: "#7cda00",
-                }}
-              >
-                Find Your Strategy
-              </p>
-              <div
-                className="col-lg-6 video-box justify-content-center"
-                data-aos="fade-in"
-              >
-                <img
-                  src={Image4} // Use imported image here
-                  className="img-fluid"
-                  alt="artdev-official-img"
-                />
-              </div>
-              <div className="col-lg-5 d-flex flex-column d-flex justify-content-center about-content">
-                <div className="section-title-new" data-aos="fade-in">
-                  <h2
-                    style={{
-                      fontSize: "30px",
-                      fontWeight: "bolder",
-                      lineHeight: "40px",
-                    }}
-                  >
-                    We Help You Discover the Right Strategy
-                  </h2>
-                  <p>
-                    Don’t miss out! With our creative ideas, Invo is always
-                    ready to offer unique and innovative strategies tailored to
-                    your business. We analyze and stay updated on what
-                    captivates and attracts your target audience. By staying
-                    unique, your business will easily stand out and grab the
-                    attention of potential customers, making it easier to
-                    compete in the market.
-                  </p>
-                </div>
-                <NavLink to="#">
-                  Check Our Case Studies <i className="bi bi-arrow-right" />
-                </NavLink>
-                <div className="about-3-quote" data-aos="fade-in">
-                  <div className="content">
-                    <blockquote>
-                      <p>
-                        Whether you believe it or not, their services are truly
-                        amazing. My daily sales, which used to be around 3
-                        million, have now doubled, even tripled. Invo’s
-                        professionalism is exceptional!
-                      </p>
-                      <h5>Iqbal Ramadhan</h5>
-                      <p>Owner of Creative Youth Vision</p>
-                    </blockquote>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section> */}
-
-        {/* What Our Clients Say */}
-
-        {/* End About Us Section */}
-
-        {/*End About Us Section */}
-
+       
         <section id="boxes" className="boxes  xl:px-20">
           <div className="container" data-aos="fade-in">
             <div className="section-title-new" data-aos="fade-in">
@@ -818,8 +742,21 @@ function Home() {
                     required
                   ></textarea>
                 </div>
-                <button type="submit" className="submit-btn">
+                <button
+                  type="submit"
+                  class="flex justify-center w-full gap-2 items-center mx-auto shadow-xl text-lg bg-gray-50 backdrop-blur-md lg:font-semibold isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-[#7cda00] hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group"
+                >
                   Submit
+                  <svg
+                    class="w-8 h-8 justify-end group-hover:rotate-90 group-hover:bg-gray-50 text-gray-50 ease-linear duration-300 rounded-full border border-gray-700 group-hover:border-none p-2 rotate-45"
+                    viewBox="0 0 16 19"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
+                      class="fill-gray-800 group-hover:fill-gray-800"
+                    ></path>
+                  </svg>
                 </button>
               </form>
             </div>

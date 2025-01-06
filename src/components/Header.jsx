@@ -9,7 +9,7 @@ function Header() {
   return (
     <header id="header" className="header d-flex align-items-center">
       <div className="container-fluid container-xl d-flex align-items-center justify-content-between">
-        <NavLink to="/client/form" className="logo d-flex align-items-center">
+        <NavLink to="/" className="logo d-flex align-items-center">
           <img
             src={logoUp}
             className="img-fluid"
@@ -71,9 +71,11 @@ function Header() {
         {/* .navbar */}
         <div className="btn-nav d-flex align-items-center">
           <ul>
-            <li className="login-nav">
-              <button className="cunsulBtn">Free Consultation </button>
-            </li>
+            <NavLink to="/client/form">
+              <li className="login-nav">
+                <button className="cunsulBtn">Free Consultation </button>
+              </li>
+            </NavLink>
           </ul>
         </div>
         <i className="mobile-nav-toggle mobile-nav-show bi bi-list" />
