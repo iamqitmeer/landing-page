@@ -1,9 +1,7 @@
 import React from "react";
-
 import "../index.css";
 import "../App.css";
 import logoDown from "../assets/img/logo-down.png";
-
 import blog1 from "../assets/img/blog/blog-01/banner.webp";
 import blog2 from "../assets/img/blog/blog-02/banner.webp";
 import blog3 from "../assets/img/blog/blog-03/banner.webp";
