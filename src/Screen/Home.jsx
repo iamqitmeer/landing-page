@@ -1,4 +1,5 @@
 import "../App.css";
+import "../index.css";
 import logoUp from "../assets/img/photoshop/logo.png";
 import aboutImage from "../assets/img/about/1.png";
 import heroImage from "../assets/img/index/3.png";
@@ -17,11 +18,6 @@ import service5 from "../assets/img/services/service-5.svg";
 import service6 from "../assets/img/services/service-6.svg";
 import service7 from "../assets/img/services/service-7.svg";
 import service8 from "../assets/img/services/service-8.svg";
-import Image4 from "../assets/img/index/4.png"; // Import image at the top
-import indexLearnImage from "../assets/img/index/index-learn.svg";
-import indexAnalysImage from "../assets/img/index/index-analys.svg";
-import indexStrategyImage from "../assets/img/index/index-strategy.svg";
-import indexDataImage from "../assets/img/index/index-data.svg";
 import clientProgressImage from "../assets/img/index/6.png";
 import investorImage from "../assets/img/index/investor.svg";
 import operationImage from "../assets/img/index/operation.svg";
@@ -35,14 +31,15 @@ import member1 from "../assets/img/member1.jpg";
 import member2 from "../assets/img/member2.jpg";
 import member3 from "../assets/img/member3.jpg";
 import { useState } from "react";
-import "swiper/css"; // Correct CSS import
-import { Swiper, SwiperSlide } from "swiper/react";
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
 import PauseOnHover from "../components/AutoScrollIcons";
 import PortfolioSection from "../components/PortfolioSection";
+import { NavLink } from "react-router";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 const testimonials = [
   {
     name: "Client Name 1",
@@ -93,79 +90,7 @@ function Home() {
 
   return (
     <>
-      <header id="header" className="header d-flex align-items-center">
-        <div className="container-fluid container-xl d-flex align-items-center justify-content-between">
-          <a href="index.html" className="logo d-flex align-items-center">
-            <img
-              src={logoUp}
-              className="img-fluid"
-              alt="logo Header Art Developer"
-            />
-          </a>
-          <nav id="navbar" className="navbar">
-            <ul>
-              <li>
-                <a href="#about-append">About</a>
-              </li>
-              <li className="dropdown">
-                <a href="javascript:void(0);">
-                  <span>Services</span>{" "}
-                  <i className="ri-arrow-down-s-line dropdown-indicator" />
-                  {/* <i class="ri-arrow-down-s-line"></i> */}
-                </a>
-                <ul>
-                  <li>
-                    <a href="#">Custom Software Development</a>
-                  </li>
-                  <li>
-                    <a href="#">Mobile App Development</a>
-                  </li>
-                  <li>
-                    <a href="#">Web Application Development</a>
-                  </li>
-                  <li>
-                    <a href="#">E-commerce Solutions</a>
-                  </li>
-                  <li>
-                    <a href="#">UI/UX Design & Prototyping</a>
-                  </li>
-                  <li>
-                    <a href="#">Cloud Solutions & Integration</a>
-                  </li>
-                  <li>
-                    <a href="#">API Development & Integration</a>
-                  </li>
-                  <li>
-                    <a href="#">AI & Machine Learning Solutions</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#boxes-hero">Why Us</a>
-              </li>
-              <li>
-                <a href="#">Portfolio</a>
-              </li>
-              <li>
-                <a href="#layanan-kita">Services</a>
-              </li>
-              <li>
-                <a href="#contact">Contact Us</a>
-              </li>
-            </ul>
-          </nav>
-          {/* .navbar */}
-          <div className="btn-nav d-flex align-items-center">
-            <ul>
-              <li className="login-nav">
-                <button className="cunsulBtn">Free Consultation </button>
-              </li>
-            </ul>
-          </div>
-          <i className="mobile-nav-toggle mobile-nav-show bi bi-list" />
-          <i className="mobile-nav-toggle mobile-nav-hide d-none bi bi-x" />
-        </div>
-      </header>
+      <Header />
 
       {/* End Header */}
 
@@ -208,7 +133,7 @@ function Home() {
 
       {/* End Header */}
       {/* ======= Hero Section ======= */}
-      <section id="hero" className="hero">
+      <section id="hero" className="hero xl:px-20">
         <div className="container position-relative">
           <div className="row gy-5 justify-content-between" data-aos="fade-in">
             <div className="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
@@ -248,10 +173,10 @@ function Home() {
       </section>
 
       {/* End Hero Section */}
-      <main id="main" className="mobile-view">
+      <main id="main" className="mobile-view ">
         {/* ======= Services Section ======= */}
 
-        <section id="about-append" className="about-append">
+        <section id="about-append" className="about-append  xl:px-20">
           <div className="container" data-aos="fade-in">
             <div className="row align-items-xl-center gy-4 justify-content-between">
               <p>About Us</p>
@@ -386,7 +311,7 @@ function Home() {
           </div>
         </section>
 
-        <section id="boxes-hero" className="boxes-hero">
+        <section id="boxes-hero" className="boxes-hero  xl:px-20">
           <div className="container">
             <header className="section-header">
               <p>Why Us?</p>
@@ -465,7 +390,7 @@ function Home() {
         {/* End About Section */}
         {/* ======= Why Us Section ======= */}
 
-        <section id="layanan-kita" className="layanan-kita">
+        <section id="layanan-kita" className="layanan-kita  xl:px-20">
           <div className="container" data-aos="fade-in">
             <header className="section-header">
               <p>Our Services</p>
@@ -477,12 +402,15 @@ function Home() {
               {[
                 {
                   img: service5,
+                  path: "/services/web-development",
+
                   title: "Web Development",
                   description:
                     "Build a powerful online presence for your business with our responsive and scalable web development services.",
                 },
                 {
                   img: service2,
+                  path: "/services/app-development",
                   title: "App Development",
                   description:
                     "Create seamless mobile experiences with custom mobile apps tailored to your business goals.",
@@ -490,44 +418,54 @@ function Home() {
                 {
                   img: service3,
                   title: "Graphic Design",
+                  path: "/services/graphic-design",
                   description:
                     "Enhance your brand’s visual identity with stunning graphic designs that engage and inspire your audience.",
                 },
                 {
                   img: service4,
                   title: "UI/UX Design",
+                  path: "/services/ui-ux-design",
                   description:
                     "Create intuitive, user-friendly interfaces that enhance the user experience and drive conversions.",
                 },
                 {
                   img: service1,
                   title: "Digital Marketing",
+                  path: "/services/digital-marketing",
+
                   description:
                     "Grow your brand's reach and visibility with tailored digital marketing strategies that drive results.",
                 },
                 {
                   img: service7,
-                  title: "SEO",
+                  title: "Cybersecurity",
+                  path: "/services/cybersecurity",
                   description:
-                    "Optimize your website for search engines to increase organic traffic and improve your online visibility.",
+                    "Safeguard your business from evolving cyber threats with robust cybersecurity solutions. We implement advanced security protocols to protect your data, systems, and reputation from attacks.",
                 },
+
                 {
                   img: service8,
                   title: "Blockchain",
+                  path: "/services/blockchain",
                   description:
                     "Leverage blockchain technology for secure, transparent solutions that enhance business processes.",
                 },
                 {
                   img: service6,
-                  title: "Branding",
+                  title: "AI & Machine Learning Solutions",
+                  path: "/services/ai-ml",
                   description:
-                    "Build a strong brand identity that resonates with your audience and sets you apart from competitors.",
+                    "Harness the power of AI and Machine Learning to drive innovation, automate processes, and transform your business with data-driven insights and predictive analytics.",
                 },
                 {
                   img: service6,
-                  title: "Cybersecurity",
+                  title: "Social Media Management",
+                  path: "/services/social-media-management",
+
                   description:
-                    "Protect your business from cyber threats with advanced cybersecurity measures and secure systems.",
+                    "Maximize your online presence with strategic social media management. We create engaging content, monitor analytics, and boost your brand visibility across multiple platforms to drive growth and customer engagement.",
                 },
               ].map((service, index) => (
                 <div
@@ -542,9 +480,9 @@ function Home() {
                     <h3>{service.title}</h3>
                     <p>{service.description}</p>
                     <div class="container">
-                      <a href="#" class="btn-shine">
+                      <NavLink to={service.path} class="btn-shine">
                         Learn More
-                      </a>
+                      </NavLink>
                     </div>
                   </div>
                 </div>
@@ -602,9 +540,9 @@ function Home() {
                     compete in the market.
                   </p>
                 </div>
-                <a href="#">
+                <NavLink to="#">
                   Check Our Case Studies <i className="bi bi-arrow-right" />
-                </a>
+                </NavLink>
                 <div className="about-3-quote" data-aos="fade-in">
                   <div className="content">
                     <blockquote>
@@ -630,7 +568,7 @@ function Home() {
 
         {/*End About Us Section */}
 
-        <section id="boxes" className="boxes">
+        <section id="boxes" className="boxes  xl:px-20">
           <div className="container" data-aos="fade-in">
             <div className="section-title-new" data-aos="fade-in">
               <p>How We Work</p>
@@ -719,18 +657,18 @@ function Home() {
                       guiding our team to success.
                     </p>
                     <div className="social-links">
-                      <a href="#" className="">
+                      <NavLink to="#" className="">
                         <i className="ri-facebook-fill"></i>
-                      </a>
-                      <a href="#" className="">
+                      </NavLink>
+                      <NavLink to="#" className="">
                         <i className="ri-instagram-fill"></i>
-                      </a>
-                      <a href="#" className="">
+                      </NavLink>
+                      <NavLink to="#" className="">
                         <i className="ri-twitter-fill"></i>
-                      </a>
-                      <a href="#" className="">
+                      </NavLink>
+                      <NavLink to="#" className="">
                         <i className="ri-linkedin-fill"></i>
-                      </a>
+                      </NavLink>
                     </div>
                   </div>
                 </div>
@@ -756,18 +694,18 @@ function Home() {
                       solutions for the future.
                     </p>
                     <div className="social-links">
-                      <a href="#" className="">
+                      <NavLink to="#" className="">
                         <i className="ri-facebook-fill"></i>
-                      </a>
-                      <a href="#" className="">
+                      </NavLink>
+                      <NavLink to="#" className="">
                         <i className="ri-instagram-fill"></i>
-                      </a>
-                      <a href="#" className="">
+                      </NavLink>
+                      <NavLink to="#" className="">
                         <i className="ri-twitter-fill"></i>
-                      </a>
-                      <a href="#" className="">
+                      </NavLink>
+                      <NavLink to="#" className="">
                         <i className="ri-linkedin-fill"></i>
-                      </a>
+                      </NavLink>
                     </div>
                   </div>
                 </div>
@@ -793,18 +731,18 @@ function Home() {
                       lasting relationships.
                     </p>
                     <div className="social-links">
-                      <a href="#" className="">
+                      <NavLink to="#" className="">
                         <i className="ri-facebook-fill"></i>
-                      </a>
-                      <a href="#" className="">
+                      </NavLink>
+                      <NavLink to="#" className="">
                         <i className="ri-instagram-fill"></i>
-                      </a>
-                      <a href="#" className="">
+                      </NavLink>
+                      <NavLink to="#" className="">
                         <i className="ri-twitter-fill"></i>
-                      </a>
-                      <a href="#" className="">
+                      </NavLink>
+                      <NavLink to="#" className="">
                         <i className="ri-linkedin-fill"></i>
-                      </a>
+                      </NavLink>
                     </div>
                   </div>
                 </div>
@@ -814,7 +752,7 @@ function Home() {
         </section> */}
 
         {/* ======= Call To Action Section ======= */}
-        <section id="hero-2" className="hero-2">
+        <section id="hero-2" className="hero-2  xl:px-20">
           <div className="container text-center" data-aos="fade-in">
             <h1>Get Started Now ?</h1>
             <p style={{ color: "rgba(255, 255, 255, 0.6)" }}>
@@ -823,18 +761,18 @@ function Home() {
               accelerate your business growth and ensure its success in the
               digital world.
             </p>
-            <a className="btn-get-started-2" href="#layanan-kita">
+            <NavLink className="btn-get-started-2" href="#layanan-kita">
               Explore Our Services
-            </a>
-            <a className="btn-get-started-bot" href="#" onClick="ATC()">
+            </NavLink>
+            <NavLink className="btn-get-started-bot" href="#" onClick="ATC()">
               Contact Us
-            </a>
+            </NavLink>
           </div>
         </section>
         {/* End Call To Action Section */}
       </main>
 
-      <section id="contact" className="contact-section">
+      <section id="contact" className="contact-section  xl:px-20">
         <div className="container">
           <div className="section-title-new" data-aos="fade-in">
             <span className="heading">Contact Us</span>
@@ -891,174 +829,16 @@ function Home() {
 
       {/* ======= Footer ======= */}
 
-      <footer id="footer" className="footer">
-        <div className="footer-top" data-aos="fade-in">
-          <div className="container">
-            <div className="row justify-content-between">
-              <div
-                className="col-lg-3 col-md-6 footer-contact"
-                data-aos="fade-in"
-              >
-                <img src={logoDown} alt="Zenth Solution Logo" />
-                <p>
-                  Medan, Sumatera Utara
-                  <br />
-                  Indonesia
-                  <br />
-                  <strong>Phone :</strong>{" "}
-                  <a href="https://api.whatsapp.com/send?text=Halo%20Zenth%20Solution,%20Saya%20ingin%20Konsultasi%20Layanan%20Dengan%20Anda&phone=6281260779669">
-                    0812-6077-9669
-                  </a>
-                  <br />
-                  <strong>Email :</strong>{" "}
-                  <a href="mailto:info@zenthsolution.com?subject=Halo%20Zenth%20Solution,%20Saya%20ingin%20konsultasi">
-                    info@zenthsolution.com
-                  </a>
-                  <br />
-                </p>
-                <div className="social-links-abc">
-                  <a
-                    style={{ margin: "0px 5px" }}
-                    href="#"
-                    className="facebook"
-                    target="_blank"
-                  >
-                    <i
-                      style={{ fontSize: "30px" }}
-                      className="ri-facebook-box-fill"
-                    ></i>{" "}
-                  </a>
-                  <a
-                    style={{ margin: "0px 5px" }}
-                    href="#"
-                    className="instagram"
-                    target="_blank"
-                  >
-                    <i
-                      style={{ fontSize: "30px" }}
-                      className="ri-instagram-fill"
-                    ></i>{" "}
-                  </a>
-                  <a
-                    style={{ margin: "0px 5px" }}
-                    href="#"
-                    className="linkedin"
-                    target="_blank"
-                  >
-                    <i
-                      style={{ fontSize: "30px" }}
-                      className="ri-linkedin-box-fill"
-                    ></i>{" "}
-                  </a>
-                  <a
-                    style={{ margin: "0px 5px" }}
-                    href="#"
-                    className="tiktok"
-                    target="_blank"
-                  >
-                    <i
-                      style={{ fontSize: "30px" }}
-                      className="ri-tiktok-line"
-                    ></i>{" "}
-                  </a>
-                </div>
-              </div>
-
-              <div
-                className="col-lg-2 col-md-6 footer-links"
-                data-aos="fade-in"
-              >
-                <h4>Our Services</h4>
-                <ul>
-                  <li>
-                    <a href="#">Web Development</a>
-                  </li>
-                  <li>
-                    <a href="#">Mobile App Development</a>
-                  </li>
-                  <li>
-                    <a href="#">Digital Marketing</a>
-                  </li>
-                  <li>
-                    <a href="#">UI/UX Design</a>
-                  </li>
-                  <li>
-                    <a href="#">SEO & Branding</a>
-                  </li>
-                  <li>
-                    <a href="#">Blockchain Solutions</a>
-                  </li>
-                </ul>
-              </div>
-
-              <div
-                className="col-lg-2 col-md-6 footer-links"
-                data-aos="fade-in"
-              >
-                <h4>Useful Links</h4>
-                <ul>
-                  <li>
-                    <a href="#">About Zenth Solution</a>
-                  </li>
-                  <li>
-                    <a href="#">Our Portfolio</a>
-                  </li>
-                  <li>
-                    <a href="#">Privacy Policy</a>
-                  </li>
-                  <li>
-                    <a href="#">Terms & Conditions</a>
-                  </li>
-                </ul>
-              </div>
-
-              {/* <div className="col-lg-3 col-md-6 footer-blog" data-aos="fade-in">
-                <h4>Our Latest Articles</h4>
-                <ul>
-                  <li>
-                    <img src={blog1} alt="Blog 1" />
-                    <a href="#">
-                      The Importance of Digital Marketing for Business Growth
-                    </a>
-                  </li>
-                  <li>
-                    <img src={blog2} alt="Blog 2" />
-                    <a href="#">
-                      How Effective Branding Sets You Apart in a Competitive
-                      Market
-                    </a>
-                  </li>
-                  <li>
-                    <img src={blog3} alt="Blog 3" />
-                    <a href="#">
-                      Optimizing Your Website for Better User Experience
-                    </a>
-                  </li>
-                  <li>
-                    <img src={blog4} alt="Blog 4" />
-                    <a href="#">Leveraging SEO to Boost Website Traffic</a>
-                  </li>
-                </ul>
-              </div> */}
-            </div>
-          </div>
-        </div>
-
-        <div className="container">
-          <div className="copyright">
-            © Copyright 2025 Zenth Solution™ - All Rights Reserved
-          </div>
-        </div>
-      </footer>
+      <Footer />
 
       {/* End Footer */}
       {/* End Footer */}
-      <a
+      <NavLink
         href="#"
         className="scroll-top d-flex align-items-center justify-content-center"
       >
         <i className="bi bi-arrow-up-short" />
-      </a>
+      </NavLink>
     </>
   );
 }

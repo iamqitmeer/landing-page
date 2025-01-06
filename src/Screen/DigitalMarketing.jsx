@@ -10,13 +10,28 @@ import {
   ChevronRight,
   Star,
   Check,
+  Code2,
+  User,
+  Globe2,
 } from "lucide-react";
 import "../index.css";
 import "../App.css";
 import logoUp from "../assets/img/photoshop/logo.png";
 import logoDown from "../assets/img/logo-down.png";
+import { BiDesktop, BiMobile } from "react-icons/bi";
+import { BsBarChart } from "react-icons/bs";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { FaBoxOpen, FaFacebookF } from "react-icons/fa";
+import {
+  AiOutlineDollar,
+  AiOutlinePieChart,
+  AiOutlineSearch,
+  AiOutlineTeam,
+  AiOutlineUserAdd,
+} from "react-icons/ai";
+import { HiOutlineNewspaper } from "react-icons/hi2";
+import { MdEmail, MdOutlineContentPaste } from "react-icons/md";
 
 const Button = ({ children, primary = false, large = false, ...props }) => (
   <button
@@ -109,7 +124,7 @@ const StatCard = ({ value, label }) => (
   </div>
 );
 
-export default function WebDevelopment() {
+export default function DigitalMarketing() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -129,69 +144,69 @@ export default function WebDevelopment() {
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight animate-fade-in-up text-[#fff]">
               Elevate Your{" "}
-              <span className="text-[#7cda00]">Digital Presence</span>
+              <span className="text-[#7cda00]">Digital Marketing Strategy</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 animate-fade-in-up animation-delay-300 text-[#fff]">
-              At Zenth Solution Provideo, we craft exceptional web experiences
-              that drive growth, enhance user engagement, and ensure your
-              long-term success in the digital world.
+              At Zenth Solution, we craft tailored digital marketing strategies
+              that enhance brand visibility, drive engagement, and maximize
+              conversions through innovative digital channels.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up animation-delay-600">
-              <button class="buttonabc">Get Start</button>
+              <button class="buttonabc">Get Started</button>
             </div>
           </div>
         </div>
       </header>
 
       <main className="mx-auto ">
-        <section id="services" className=" px-8">
+        <section id="services" className="px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl text-[#7cda00] font-bold mb-4">
-              Our Web Development Expertise
+              Our Digital Marketing Expertise
             </h2>
             <p className="text-xl text-zinc-200 max-w-3xl mx-auto">
-              We leverage cutting-edge technologies and industry best practices
-              to deliver exceptional web solutions tailored to your unique
-              business needs.
+              We specialize in building impactful digital marketing campaigns to
+              help your business grow, improve online presence, and connect with
+              your audience effectively.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: "Custom Web Applications",
-                icon: <Code className="h-16 w-16" />,
+                title: "Search Engine Optimization (SEO)",
+                icon: <AiOutlineSearch className="h-16 w-16" />,
                 description:
-                  "Tailored solutions to meet your unique business needs and challenges, built with scalability and performance in mind.",
+                  "Optimizing your website to rank higher on search engines and drive more organic traffic.",
               },
               {
-                title: "Responsive Design",
-                icon: <Laptop className="h-16 w-16" />,
+                title: "Social Media Marketing",
+                icon: <FaFacebookF className="h-16 w-16" />,
                 description:
-                  "Crafting visually stunning and functionally seamless experiences across all devices and screen sizes.",
+                  "Crafting social media strategies that engage your audience and boost brand awareness.",
               },
               {
-                title: "User-Centric Approach",
-                icon: <Users className="h-16 w-16" />,
+                title: "Pay-Per-Click (PPC) Advertising",
+                icon: <AiOutlineDollar className="h-16 w-16" />,
                 description:
-                  "Creating intuitive interfaces that prioritize user experience, driving engagement and conversion rates.",
+                  "Running targeted ad campaigns to drive immediate traffic and achieve measurable results.",
               },
               {
-                title: "Performance Optimization",
-                icon: <Zap className="h-16 w-16" />,
+                title: "Content Marketing",
+                icon: <MdOutlineContentPaste className="h-16 w-16" />,
                 description:
-                  "Boosting your website's speed and efficiency for better user retention and improved search engine rankings.",
+                  "Creating valuable, relevant content to attract and engage your audience, building long-term relationships.",
               },
               {
-                title: "Data-Driven Development",
-                icon: <BarChart className="h-16 w-16" />,
+                title: "Email Marketing",
+                icon: <MdEmail className="h-16 w-16" />,
                 description:
-                  "Leveraging analytics and user insights to make informed decisions and drive measurable results.",
+                  "Designing personalized email campaigns to nurture leads, increase conversions, and retain customers.",
               },
               {
-                title: "Scalable Solutions",
-                icon: <Globe className="h-16 w-16" />,
+                title: "Influencer Marketing",
+                icon: <AiOutlineUserAdd className="h-16 w-16" />,
                 description:
-                  "Building flexible and extensible websites that grow with your business and adapt to future technological advancements.",
+                  "Collaborating with influencers to reach a broader audience and build trust for your brand.",
               },
             ].map((item, index) => (
               <Card key={index} {...item} />
@@ -203,74 +218,43 @@ export default function WebDevelopment() {
           <div className="grid md:grid-cols-2 gap-12 items-center p-14">
             <div>
               <h2 className="text-4xl text-[#7cda00] font-bold mb-8">
-                Our Development Process
+                Our Digital Marketing Process
               </h2>
               <ProcessStep
                 number="1"
-                title="Discovery and Planning"
-                description="We start by deeply understanding your business goals, target audience, and project requirements to create a comprehensive roadmap for success."
+                title="Market Research & Strategy"
+                description="We begin by understanding your business goals, target audience, and competitors to build a customized digital marketing strategy."
               />
               <ProcessStep
                 number="2"
-                title="Design and Prototyping"
-                description="Our expert designers create intuitive and visually appealing interfaces, ensuring a seamless user experience across all devices and platforms."
+                title="Campaign Development & Optimization"
+                description="We develop and launch digital marketing campaigns, continuously monitoring and optimizing for the best results."
               />
               <ProcessStep
                 number="3"
-                title="Development and Integration"
-                description="Our skilled developers bring the designs to life, integrating robust functionality and ensuring scalability to meet your current and future needs."
+                title="Engagement & Growth"
+                description="We focus on increasing engagement through targeted content, social media strategies, and paid ads to grow your brand’s presence."
+              />
+              <ProcessStep
+                number="4"
+                title="Analytics & Reporting"
+                description="We provide in-depth analysis of your campaigns and track key metrics to ensure optimal ROI and long-term growth."
               />
               <ProcessStep
                 number="5"
-                title="Deployment and Support"
-                description="We handle the launch process with care and provide ongoing support and maintenance to keep your website running smoothly and securely."
+                title="Continuous Improvement"
+                description="We refine and adjust strategies based on performance data, ensuring your digital marketing efforts are always evolving."
               />
             </div>
-            <div className="relative h-[600px] rounded-lg overflow-hidden shadow-2xl ">
+            <div className="relative h-[600px] rounded-lg overflow-hidden shadow-2xl">
               <img
                 className="absolute inset-0 w-full h-full object-cover rounded-lg shadow-md"
                 src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="Development Process"
+                alt="Digital Marketing Process"
               />
             </div>
           </div>
         </section>
-
-        {/* <section id="portfolio" className="">
-          <div className="text-center mb-16 p-14">
-            <h2 className="text-4xl font-bold mb-4">Our Recent Projects</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Explore some of our latest web development projects that showcase
-              our expertise and commitment to excellence.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3, 4, 5, 6].map((item) => (
-              <div
-                key={item}
-                className="group relative overflow-hidden rounded-lg shadow-lg"
-              >
-                Replace with actual project images
-                <div className="aspect-w-16 aspect-h-9 bg-gray-200">
-                  <div className="flex items-center justify-center text-gray-500 text-lg">
-                    Project {item} Image
-                  </div>
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                  <div className="p-4 text-white">
-                    <h3 className="text-xl font-semibold mb-2">
-                      Project {item}
-                    </h3>
-                    <p className="text-sm">
-                      Brief description of the project and technologies used.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-      
-        </section> */}
 
         <section id="faq" className="">
           <div className="text-center mb-16">
@@ -278,47 +262,48 @@ export default function WebDevelopment() {
               Frequently Asked Questions
             </h2>
             <p className="text-xl text-zinc-100 max-w-3xl mx-auto">
-              Got questions? We've got answers. If you don't see your question
-              here, feel free to reach out to us directly.
+              Have questions? We're here to help. Check out our answers to
+              common queries, or get in touch with us for more details.
             </p>
           </div>
           <div className="max-w-3xl mx-auto">
-            <Accordion title="What types of web development projects do you handle?">
+            <Accordion title="What digital marketing services do you offer?">
               <p className="text-zinc-200 leading-relaxed">
-                We handle a wide range of web development projects, including
-                custom web applications, e-commerce platforms, content
-                management systems, progressive web apps, and more. Our team is
-                equipped to tackle projects of various scales and complexities,
-                from simple brochure websites to complex enterprise-level
-                applications.
+                We offer a comprehensive range of digital marketing services,
+                including SEO, social media marketing, PPC, content marketing,
+                email marketing, and influencer marketing. Our goal is to help
+                businesses grow and thrive in the digital landscape.
               </p>
             </Accordion>
-            <Accordion title="How long does a typical web development project take?">
+            <Accordion title="How long does it take to see results from digital marketing?">
               <p className="text-zinc-200 leading-relaxed">
-                The timeline for a web development project can vary depending on
-                its scope and complexity. A simple website might take 4-8 weeks,
-                while a complex web application could take several months. We'll
-                provide a detailed timeline during our initial consultation and
-                keep you updated throughout the development process.
+                The timeline for seeing results depends on various factors,
+                including the service and goals. SEO and organic growth may take
+                a few months, while PPC campaigns can yield faster results. We
+                provide regular reports to keep you informed on the progress.
               </p>
             </Accordion>
-            <Accordion title="Do you provide ongoing support after the website is launched?">
+            <Accordion title="Do you offer custom strategies for businesses?">
               <p className="text-zinc-200 leading-relaxed">
-                Yes, we offer ongoing support and maintenance packages to ensure
-                your website continues to perform optimally. This includes
-                regular updates, security patches, performance monitoring, and
-                technical support. We're committed to the long-term success of
-                your digital presence.
+                Yes, we develop tailored strategies for each business based on
+                their specific goals, target audience, and industry. Our team
+                works closely with you to ensure the approach fits your business
+                needs.
               </p>
             </Accordion>
-            <Accordion title="How do you ensure the security of the websites you develop?">
+            <Accordion title="What tools do you use for digital marketing?">
               <p className="text-zinc-200 leading-relaxed">
-                Security is a top priority in our development process. We
-                implement best practices such as secure coding, regular security
-                audits, SSL certificates, and robust authentication systems. We
-                also keep all software and plugins up-to-date to protect against
-                vulnerabilities and provide ongoing monitoring for potential
-                security threats.
+                We use industry-leading tools like Google Analytics, SEMrush,
+                Hootsuite, Mailchimp, and others to track, analyze, and optimize
+                campaigns for the best results.
+              </p>
+            </Accordion>
+            <Accordion title="How do you measure the success of a digital marketing campaign?">
+              <p className="text-zinc-200 leading-relaxed">
+                We measure success through key metrics such as website traffic,
+                conversion rates, engagement rates, ROI, and customer feedback.
+                These metrics help us assess the effectiveness of campaigns and
+                optimize them for better outcomes.
               </p>
             </Accordion>
           </div>

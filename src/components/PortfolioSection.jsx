@@ -49,7 +49,7 @@ function PortfolioSection() {
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
-    <section className="portfolio-section">
+    <section className="portfolio-section xl:px-20" >
       <div className="container">
         <header className="section-header portfolio-header">
           <p>Our Portfolio</p>

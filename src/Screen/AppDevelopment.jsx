@@ -10,11 +10,18 @@ import {
   ChevronRight,
   Star,
   Check,
+  Code2,
+  User,
+  Globe2,
 } from "lucide-react";
 import "../index.css";
 import "../App.css";
 import logoUp from "../assets/img/photoshop/logo.png";
+import logoDown from "../assets/img/logo-down.png";
+import { BiMobile } from "react-icons/bi";
 
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 const Button = ({ children, primary = false, large = false, ...props }) => (
   <button
     className={`
@@ -34,13 +41,9 @@ const Button = ({ children, primary = false, large = false, ...props }) => (
 
 const Card = ({ icon, title, description }) => (
   <div className="bg-[#0b0b0b] p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300  group">
-    <div className="text-[#7cda00] mb-6 ">
-      {icon}
-    </div>
-    <h3 className="text-2xl font-semibold mb-4 ">
-      {title}
-    </h3>
-    <p className="text-gray-600 leading-relaxed">{description}</p>
+    <div className="text-[#7cda00] mb-6 ">{icon}</div>
+    <h3 className="text-2xl font-semibold mb-4 text-white ">{title}</h3>
+    <p className=" leading-relaxed text-zinc-300">{description}</p>
   </div>
 );
 
@@ -52,9 +55,7 @@ const ProcessStep = ({ number, title, description }) => (
       </div>
     </div>
     <div>
-      <h4 className="text-xl text-white font-bold mb-3">
-        {title}
-      </h4>
+      <h4 className="text-xl text-white font-bold mb-3">{title}</h4>
       <p className="text-zinc-100 leading-relaxed">{description}</p>
     </div>
   </div>
@@ -112,7 +113,7 @@ const StatCard = ({ value, label }) => (
   </div>
 );
 
-export default function WebDevelopment() {
+export default function AppDevelopment() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -125,150 +126,76 @@ export default function WebDevelopment() {
 
   return (
     <div className="bg-gray-50 min-h-screen">
-      <header id="header" className="header d-flex align-items-center">
-        <div className="container-fluid container-xl d-flex align-items-center justify-content-between">
-          <a href="index.html" className="logo d-flex align-items-center">
-            <img
-              src={logoUp}
-              className="img-fluid"
-              alt="logo Header Art Developer"
-            />
-          </a>
-          <nav id="navbar" className="navbar">
-            <ul>
-              <li>
-                <a href="#about-append">About</a>
-              </li>
-              <li className="dropdown">
-                <a href="javascript:void(0);">
-                  <span>Services</span>{" "}
-                  <i className="ri-arrow-down-s-line dropdown-indicator" />
-                  {/* <i class="ri-arrow-down-s-line"></i> */}
-                </a>
-                <ul>
-                  <li>
-                    <a href="#">Custom Software Development</a>
-                  </li>
-                  <li>
-                    <a href="#">Mobile App Development</a>
-                  </li>
-                  <li>
-                    <a href="#">Web Application Development</a>
-                  </li>
-                  <li>
-                    <a href="#">E-commerce Solutions</a>
-                  </li>
-                  <li>
-                    <a href="#">UI/UX Design & Prototyping</a>
-                  </li>
-                  <li>
-                    <a href="#">Cloud Solutions & Integration</a>
-                  </li>
-                  <li>
-                    <a href="#">API Development & Integration</a>
-                  </li>
-                  <li>
-                    <a href="#">AI & Machine Learning Solutions</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#boxes-hero">Why Us</a>
-              </li>
-              <li>
-                <a href="#">Portfolio</a>
-              </li>
-              <li>
-                <a href="#layanan-kita">Services</a>
-              </li>
-              <li>
-                <a href="#contact">Contact Us</a>
-              </li>
-            </ul>
-          </nav>
-          {/* .navbar */}
-          <div className="btn-nav d-flex align-items-center">
-            <ul>
-              <li className="login-nav">
-                <button className="cunsulBtn">Free Consultation </button>
-              </li>
-            </ul>
-          </div>
-          <i className="mobile-nav-toggle mobile-nav-show bi bi-list" />
-          <i className="mobile-nav-toggle mobile-nav-hide d-none bi bi-x" />
-        </div>
-      </header>
-
+   <Header/>
       <header className="bg-[#000000] text-white py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight animate-fade-in-up">
-              Elevate Your Digital Presence
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight animate-fade-in-up text-[#fff]">
+              Elevate Your{" "}
+              <span className="text-[#7cda00]">Mobile Presence</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 animate-fade-in-up animation-delay-300">
-              At Zenth Solution Provideo, we craft exceptional web experiences
-              that drive growth, enhance user engagement, and ensure your
-              long-term success in the digital world.
+            <p className="text-xl md:text-2xl mb-8 animate-fade-in-up animation-delay-300 text-[#fff]">
+              At Zenth Solution Provideo, we specialize in crafting exceptional
+              mobile applications that drive growth, enhance user engagement,
+              and ensure long-term success in the digital world.
             </p>
+
             <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up animation-delay-600">
-              <Button primary large>
-                Get Started
-              </Button>
-              <Button large>Learn More</Button>
+              <button class="buttonabc">Get Start</button>
             </div>
           </div>
         </div>
       </header>
 
       <main className="mx-auto ">
-        <section id="services" className=" px-8">
+        <section id="services" className="px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl text-[#7cda00] font-bold mb-4">
-              Our Web Development Expertise
+              Our Mobile App Development Expertise
             </h2>
             <p className="text-xl text-zinc-200 max-w-3xl mx-auto">
               We leverage cutting-edge technologies and industry best practices
-              to deliver exceptional web solutions tailored to your unique
-              business needs.
+              to deliver exceptional mobile app solutions tailored to your
+              unique business needs.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: "Custom Web Applications",
-                icon: <Code className="h-16 w-16" />,
+                title: "Custom Mobile Applications",
+                icon: <BiMobile className="h-16 w-16" />,
                 description:
-                  "Tailored solutions to meet your unique business needs and challenges, built with scalability and performance in mind.",
+                  "Tailored mobile app solutions to meet your unique business needs, built for performance and scalability.",
               },
               {
-                title: "Responsive Design",
-                icon: <Laptop className="h-16 w-16" />,
+                title: "Cross-Platform Development",
+                icon: <Code2 className="h-16 w-16" />,
                 description:
-                  "Crafting visually stunning and functionally seamless experiences across all devices and screen sizes.",
+                  "Delivering seamless app experiences across iOS and Android platforms, ensuring broader reach and consistency.",
               },
               {
-                title: "User-Centric Approach",
-                icon: <Users className="h-16 w-16" />,
+                title: "User-Centric Interfaces",
+                icon: <User className="h-16 w-16" />,
                 description:
-                  "Creating intuitive interfaces that prioritize user experience, driving engagement and conversion rates.",
+                  "Designing intuitive and engaging app interfaces that enhance user experience and drive retention.",
               },
               {
                 title: "Performance Optimization",
                 icon: <Zap className="h-16 w-16" />,
                 description:
-                  "Boosting your website's speed and efficiency for better user retention and improved search engine rankings.",
+                  "Creating apps optimized for speed, responsiveness, and efficiency to deliver unparalleled user satisfaction.",
               },
               {
                 title: "Data-Driven Development",
                 icon: <BarChart className="h-16 w-16" />,
                 description:
-                  "Leveraging analytics and user insights to make informed decisions and drive measurable results.",
+                  "Leveraging analytics and insights to make informed decisions and deliver measurable results through mobile apps.",
               },
               {
                 title: "Scalable Solutions",
-                icon: <Globe className="h-16 w-16" />,
+                icon: <Globe2 className="h-16 w-16" />,
                 description:
-                  "Building flexible and extensible websites that grow with your business and adapt to future technological advancements.",
+                  "Building flexible and extensible mobile applications that grow with your business and adapt to future needs.",
               },
             ].map((item, index) => (
               <Card key={index} {...item} />
@@ -279,37 +206,41 @@ export default function WebDevelopment() {
         <section id="process" className="">
           <div className="grid md:grid-cols-2 gap-12 items-center p-14">
             <div>
-                
               <h2 className="text-4xl text-[#7cda00] font-bold mb-8">
-                Our Development Process
+                Our Mobile App Development Process
               </h2>
               <ProcessStep
                 number="1"
                 title="Discovery and Planning"
-                description="We start by deeply understanding your business goals, target audience, and project requirements to create a comprehensive roadmap for success."
+                description="We start by understanding your app's objectives, target audience, and unique requirements to craft a strategic roadmap for success."
               />
               <ProcessStep
                 number="2"
                 title="Design and Prototyping"
-                description="Our expert designers create intuitive and visually appealing interfaces, ensuring a seamless user experience across all devices and platforms."
+                description="Our expert designers create intuitive and visually appealing app interfaces, ensuring seamless user experiences tailored to your audience."
               />
               <ProcessStep
                 number="3"
                 title="Development and Integration"
-                description="Our skilled developers bring the designs to life, integrating robust functionality and ensuring scalability to meet your current and future needs."
+                description="Our skilled developers transform designs into high-performance apps, integrating advanced features and ensuring scalability across platforms."
               />
-       
+              <ProcessStep
+                number="4"
+                title="Testing and Quality Assurance"
+                description="Rigorous testing ensures your app is free of bugs, performs flawlessly, and provides a smooth experience for your users."
+              />
               <ProcessStep
                 number="5"
                 title="Deployment and Support"
-                description="We handle the launch process with care and provide ongoing support and maintenance to keep your website running smoothly and securely."
+                description="We handle the app's launch across app stores and provide continuous support and maintenance to ensure its success and reliability."
               />
             </div>
             <div className="relative h-[600px] rounded-lg overflow-hidden shadow-2xl">
-              {/* Replace with actual image */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white text-2xl font-bold">
-                Development Process Visualization
-              </div>
+              <img
+                className="absolute inset-0 w-full h-full object-cover rounded-lg shadow-md"
+                src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Mobile App Development Process"
+              />
             </div>
           </div>
         </section>
@@ -361,47 +292,47 @@ export default function WebDevelopment() {
             </p>
           </div>
           <div className="max-w-3xl mx-auto">
-            <Accordion title="What types of web development projects do you handle?">
+            <Accordion title="What types of mobile app projects do you handle?">
               <p className="text-zinc-200 leading-relaxed">
-                We handle a wide range of web development projects, including
-                custom web applications, e-commerce platforms, content
-                management systems, progressive web apps, and more. Our team is
-                equipped to tackle projects of various scales and complexities,
-                from simple brochure websites to complex enterprise-level
-                applications.
+                We specialize in developing a variety of mobile apps, including
+                native apps for iOS and Android, cross-platform apps using
+                frameworks like React Native, e-commerce apps, social networking
+                apps, enterprise solutions, and more. Whether it’s a simple
+                utility app or a feature-rich platform, we’ve got you covered.
               </p>
             </Accordion>
-            <Accordion title="How long does a typical web development project take?">
+            <Accordion title="How long does a typical mobile app project take?">
               <p className="text-zinc-200 leading-relaxed">
-                The timeline for a web development project can vary depending on
-                its scope and complexity. A simple website might take 4-8 weeks,
-                while a complex web application could take several months. We'll
-                provide a detailed timeline during our initial consultation and
-                keep you updated throughout the development process.
+                The timeline for a mobile app project depends on its complexity
+                and feature requirements. A basic app may take 6-10 weeks, while
+                a complex app with advanced features can take several months.
+                We’ll provide a detailed timeline during the initial
+                consultation and keep you updated throughout the process.
               </p>
             </Accordion>
-            <Accordion title="Do you provide ongoing support after the website is launched?">
+            <Accordion title="Do you provide ongoing support after the app is launched?">
               <p className="text-zinc-200 leading-relaxed">
                 Yes, we offer ongoing support and maintenance packages to ensure
-                your website continues to perform optimally. This includes
-                regular updates, security patches, performance monitoring, and
-                technical support. We're committed to the long-term success of
-                your digital presence.
+                your app remains functional, secure, and up-to-date. This
+                includes bug fixes, updates for new OS versions, performance
+                optimizations, and additional feature enhancements based on user
+                feedback.
               </p>
             </Accordion>
-            <Accordion title="How do you ensure the security of the websites you develop?">
+            <Accordion title="How do you ensure the security of the apps you develop?">
               <p className="text-zinc-200 leading-relaxed">
-                Security is a top priority in our development process. We
-                implement best practices such as secure coding, regular security
-                audits, SSL certificates, and robust authentication systems. We
-                also keep all software and plugins up-to-date to protect against
-                vulnerabilities and provide ongoing monitoring for potential
-                security threats.
+                Security is integral to our development process. We follow best
+                practices such as secure coding, data encryption, secure APIs,
+                and regular security testing. We also ensure compliance with app
+                store guidelines and industry standards to protect user data and
+                maintain app integrity.
               </p>
             </Accordion>
           </div>
         </section>
       </main>
+
+      <Footer/>
     </div>
   );
 }

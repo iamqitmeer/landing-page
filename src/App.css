@@ -5,8 +5,6 @@
   --size-mobile: 14px;
 }
 
-
-
 /* Colors */
 :root {
   --color-default: #222222;
@@ -3739,7 +3737,7 @@ section {
 --------------------------------------------------------------*/
 .footer {
   background: #000;
-  padding: 0 0 30px 0;
+  padding: 0 0 120px 0;
   color: #eee;
   font-size: 14px;
 }
@@ -8743,11 +8741,11 @@ form.whatsapp-form {
   --hover-text: #fff;
   color: #fff;
   cursor: pointer;
-  
+
   display: flex; /* Enables flexbox */
   justify-content: center; /* Centers content horizontally */
   align-items: center; /* Centers content vertically */
-  
+
   border: 1px solid var(--bg);
   width: 100%;
   border-radius: 4px;
@@ -8783,7 +8781,7 @@ form.whatsapp-form {
   /* overflow: hidden; */
   border-radius: 7px;
   cursor: pointer;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .svgContainer {
@@ -8796,7 +8794,7 @@ form.whatsapp-form {
   backdrop-filter: blur(0px);
   letter-spacing: 0.8px;
   border-radius: 10px;
-  transition: all .3s;
+  transition: all 0.3s;
   border: 1px solid rgba(156, 156, 156, 0.466);
 }
 
@@ -8809,7 +8807,7 @@ form.whatsapp-form {
   z-index: -1;
   border-radius: 10px;
   pointer-events: none;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .Btn:hover .BG {
@@ -8838,9 +8836,12 @@ form.whatsapp-form {
   transition: all 0.2s ease-in;
 }
 
-.cunsulBtn:hover {background: rgb(124, 218, 0); /* Green color */
+.cunsulBtn:hover {
+  background: rgb(124, 218, 0); /* Green color */
   box-shadow: 0 0 30px 5px rgba(0, 214, 88, 0.815); /* Greenish box-shadow */
-  
+
+  color: var(--color-primary-5);
+
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
@@ -8853,7 +8854,7 @@ form.whatsapp-form {
 }
 
 .cunsulBtn::before {
-  content: '';
+  content: "";
   display: block;
   width: 0px;
   height: 86%;
@@ -8891,4 +8892,47 @@ form.whatsapp-form {
   -webkit-transition: box-shadow 0.2s ease-in;
   -moz-transition: box-shadow 0.2s ease-in;
   transition: box-shadow 0.2s ease-in;
+}
+
+.buttonabc {
+  /* in scss with just one variable i can change opacity with rgba(variable, opacity) but in css it's not possible so i have used three seperate variables */
+  /* with hue-rotate color can be changed */
+  --main-color: rgb(46, 213, 79);
+  --main-bg-color: rgba(46, 213, 52, 0.36);
+  --pattern-color: rgba(46, 213, 116, 0.073);
+
+  /* change this rotation value */
+  filter: hue-rotate(0deg);
+
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  background: radial-gradient(
+      circle,
+      var(--main-bg-color) 0%,
+      rgba(0, 0, 0, 0) 95%
+    ),
+    linear-gradient(var(--pattern-color) 1px, transparent 1px),
+    linear-gradient(to right, var(--pattern-color) 1px, transparent 1px);
+  background-size: cover, 15px 15px, 15px 15px;
+  background-position: center center, center center, center center;
+  border-image: radial-gradient(
+      circle,
+      var(--main-color) 0%,
+      rgba(0, 0, 0, 0) 100%
+    )
+    1;
+  border-width: 1px 0 1px 0;
+  color: var(--main-color);
+  padding: 1rem 3rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  transition: background-size 0.2s ease-in-out;
+}
+
+.buttonabc:hover {
+  background-size: cover, 10px 10px, 10px 10px;
+}
+.buttonabc:active {
+  filter: hue-rotate(250deg);
 }

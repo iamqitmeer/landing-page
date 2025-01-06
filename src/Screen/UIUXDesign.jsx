@@ -10,13 +10,21 @@ import {
   ChevronRight,
   Star,
   Check,
+  Code2,
+  User,
+  Globe2,
 } from "lucide-react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import "../index.css";
 import "../App.css";
 import logoUp from "../assets/img/photoshop/logo.png";
 import logoDown from "../assets/img/logo-down.png";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import { BiDesktop, BiMobile } from "react-icons/bi";
+import { BsBarChart } from "react-icons/bs";
+import { FaBoxOpen } from "react-icons/fa";
+import { AiOutlinePieChart, AiOutlineTeam } from "react-icons/ai";
+import { HiOutlineNewspaper } from "react-icons/hi2";
 
 const Button = ({ children, primary = false, large = false, ...props }) => (
   <button
@@ -109,7 +117,7 @@ const StatCard = ({ value, label }) => (
   </div>
 );
 
-export default function WebDevelopment() {
+export default function UIUXDesign() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -128,70 +136,70 @@ export default function WebDevelopment() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight animate-fade-in-up text-[#fff]">
-              Elevate Your{" "}
-              <span className="text-[#7cda00]">Digital Presence</span>
+              Redefine Your{" "}
+              <span className="text-[#7cda00]">User Experience</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 animate-fade-in-up animation-delay-300 text-[#fff]">
-              At Zenth Solution Provideo, we craft exceptional web experiences
-              that drive growth, enhance user engagement, and ensure your
-              long-term success in the digital world.
+              At Zenth Solution, we create intuitive and engaging UI/UX designs
+              that enhance usability, delight users, and bring your ideas to
+              life through seamless interactions and stunning visuals.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up animation-delay-600">
-              <button class="buttonabc">Get Start</button>
+              <button class="buttonabc">Get Started</button>
             </div>
           </div>
         </div>
       </header>
 
       <main className="mx-auto ">
-        <section id="services" className=" px-8">
+        <section id="services" className="px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl text-[#7cda00] font-bold mb-4">
-              Our Web Development Expertise
+              Our UI/UX Design Expertise
             </h2>
             <p className="text-xl text-zinc-200 max-w-3xl mx-auto">
-              We leverage cutting-edge technologies and industry best practices
-              to deliver exceptional web solutions tailored to your unique
-              business needs.
+              We specialize in crafting user-centric designs that are both
+              visually stunning and functionally effective, ensuring seamless
+              user experiences.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: "Custom Web Applications",
-                icon: <Code className="h-16 w-16" />,
+                title: "User Research & Personas",
+                icon: <AiOutlineTeam className="h-16 w-16" />,
                 description:
-                  "Tailored solutions to meet your unique business needs and challenges, built with scalability and performance in mind.",
+                  "Conducting detailed research and creating user personas to design experiences tailored to your target audience.",
               },
               {
-                title: "Responsive Design",
-                icon: <Laptop className="h-16 w-16" />,
+                title: "Wireframing & Prototyping",
+                icon: <HiOutlineNewspaper className="h-16 w-16" />,
                 description:
-                  "Crafting visually stunning and functionally seamless experiences across all devices and screen sizes.",
+                  "Building wireframes and interactive prototypes to visualize and test the flow and functionality of your app or website.",
               },
               {
-                title: "User-Centric Approach",
-                icon: <Users className="h-16 w-16" />,
+                title: "User Interface Design",
+                icon: <BiDesktop className="h-16 w-16" />,
                 description:
-                  "Creating intuitive interfaces that prioritize user experience, driving engagement and conversion rates.",
+                  "Designing intuitive and visually appealing user interfaces that enhance engagement and usability.",
               },
               {
-                title: "Performance Optimization",
-                icon: <Zap className="h-16 w-16" />,
+                title: "Interaction Design",
+                icon: <AiOutlinePieChart className="h-16 w-16" />,
                 description:
-                  "Boosting your website's speed and efficiency for better user retention and improved search engine rankings.",
+                  "Creating interactive elements and animations that guide users and make the experience delightful.",
               },
               {
-                title: "Data-Driven Development",
-                icon: <BarChart className="h-16 w-16" />,
+                title: "Usability Testing",
+                icon: <FaBoxOpen className="h-16 w-16" />,
                 description:
-                  "Leveraging analytics and user insights to make informed decisions and drive measurable results.",
+                  "Conducting comprehensive usability tests to identify and address pain points in the user journey.",
               },
               {
-                title: "Scalable Solutions",
-                icon: <Globe className="h-16 w-16" />,
+                title: "Accessibility Design",
+                icon: <BsBarChart className="h-16 w-16" />,
                 description:
-                  "Building flexible and extensible websites that grow with your business and adapt to future technological advancements.",
+                  "Ensuring your designs are inclusive and accessible, adhering to WCAG guidelines and best practices.",
               },
             ].map((item, index) => (
               <Card key={index} {...item} />
@@ -203,34 +211,39 @@ export default function WebDevelopment() {
           <div className="grid md:grid-cols-2 gap-12 items-center p-14">
             <div>
               <h2 className="text-4xl text-[#7cda00] font-bold mb-8">
-                Our Development Process
+                Our UI/UX Design Process
               </h2>
               <ProcessStep
                 number="1"
-                title="Discovery and Planning"
-                description="We start by deeply understanding your business goals, target audience, and project requirements to create a comprehensive roadmap for success."
+                title="Discovery and Research"
+                description="We begin by understanding your users, business goals, and competitive landscape to define the design strategy."
               />
               <ProcessStep
                 number="2"
-                title="Design and Prototyping"
-                description="Our expert designers create intuitive and visually appealing interfaces, ensuring a seamless user experience across all devices and platforms."
+                title="Ideation and Wireframing"
+                description="Our team brainstorms creative solutions, develops user flows, and builds wireframes to outline the structure."
               />
               <ProcessStep
                 number="3"
-                title="Development and Integration"
-                description="Our skilled developers bring the designs to life, integrating robust functionality and ensuring scalability to meet your current and future needs."
+                title="Prototyping and Visual Design"
+                description="We create high-fidelity prototypes and visually appealing designs, ensuring they align with your brand identity."
+              />
+              <ProcessStep
+                number="4"
+                title="Usability Testing"
+                description="We test the designs with real users, collect feedback, and refine the interfaces for optimal usability."
               />
               <ProcessStep
                 number="5"
-                title="Deployment and Support"
-                description="We handle the launch process with care and provide ongoing support and maintenance to keep your website running smoothly and securely."
+                title="Delivery and Support"
+                description="We deliver the final designs in the required formats and provide ongoing support for enhancements and updates."
               />
             </div>
-            <div className="relative h-[600px] rounded-lg overflow-hidden shadow-2xl ">
+            <div className="relative h-[600px] rounded-lg overflow-hidden shadow-2xl">
               <img
                 className="absolute inset-0 w-full h-full object-cover rounded-lg shadow-md"
                 src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="Development Process"
+                alt="UI/UX Design Process"
               />
             </div>
           </div>
@@ -283,42 +296,48 @@ export default function WebDevelopment() {
             </p>
           </div>
           <div className="max-w-3xl mx-auto">
-            <Accordion title="What types of web development projects do you handle?">
+            <Accordion title="What types of UI/UX design services do you offer?">
               <p className="text-zinc-200 leading-relaxed">
-                We handle a wide range of web development projects, including
-                custom web applications, e-commerce platforms, content
-                management systems, progressive web apps, and more. Our team is
-                equipped to tackle projects of various scales and complexities,
-                from simple brochure websites to complex enterprise-level
-                applications.
+                We offer comprehensive UI/UX design services, including user
+                research, wireframing, prototyping, interaction design, visual
+                design, usability testing, and accessibility design. Whether
+                you're building a mobile app, web platform, or enterprise
+                system, we can create seamless, intuitive designs for your
+                users.
               </p>
             </Accordion>
-            <Accordion title="How long does a typical web development project take?">
+            <Accordion title="How long does a typical UI/UX design project take?">
               <p className="text-zinc-200 leading-relaxed">
-                The timeline for a web development project can vary depending on
-                its scope and complexity. A simple website might take 4-8 weeks,
-                while a complex web application could take several months. We'll
-                provide a detailed timeline during our initial consultation and
-                keep you updated throughout the development process.
+                The timeline depends on the project's scope and complexity.
+                Simple wireframes and prototypes might take 1-2 weeks, while
+                more comprehensive UI/UX projects, including user research,
+                multiple revisions, and testing, may take several weeks to a
+                couple of months. We'll provide a clear timeline during the
+                initial consultation.
               </p>
             </Accordion>
-            <Accordion title="Do you provide ongoing support after the website is launched?">
+            <Accordion title="Do you provide revisions for the designs?">
               <p className="text-zinc-200 leading-relaxed">
-                Yes, we offer ongoing support and maintenance packages to ensure
-                your website continues to perform optimally. This includes
-                regular updates, security patches, performance monitoring, and
-                technical support. We're committed to the long-term success of
-                your digital presence.
+                Yes, we include a set number of revisions in all our UI/UX
+                design packages to ensure the designs meet your expectations.
+                Additional revisions can be arranged if necessary.
               </p>
             </Accordion>
-            <Accordion title="How do you ensure the security of the websites you develop?">
+            <Accordion title="How do you ensure the designs align with our target users?">
               <p className="text-zinc-200 leading-relaxed">
-                Security is a top priority in our development process. We
-                implement best practices such as secure coding, regular security
-                audits, SSL certificates, and robust authentication systems. We
-                also keep all software and plugins up-to-date to protect against
-                vulnerabilities and provide ongoing monitoring for potential
-                security threats.
+                We start by conducting user research to understand your target
+                audience’s needs, behaviors, and pain points. Our team then
+                creates user personas and maps out user journeys to ensure the
+                designs align with your users' expectations and provide a
+                seamless experience.
+              </p>
+            </Accordion>
+            <Accordion title="What tools do you use for UI/UX design?">
+              <p className="text-zinc-200 leading-relaxed">
+                We use industry-standard tools like Figma, Adobe XD, Sketch, and
+                InVision to create wireframes, prototypes, and high-fidelity
+                designs. These tools help us collaborate effectively and iterate
+                quickly during the design process.
               </p>
             </Accordion>
           </div>

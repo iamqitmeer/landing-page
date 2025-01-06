@@ -10,13 +10,21 @@ import {
   ChevronRight,
   Star,
   Check,
+  Code2,
+  User,
+  Globe2,
 } from "lucide-react";
 import "../index.css";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import "../App.css";
 import logoUp from "../assets/img/photoshop/logo.png";
 import logoDown from "../assets/img/logo-down.png";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import { BiDesktop, BiMobile } from "react-icons/bi";
+import { BsBarChart } from "react-icons/bs";
+import { FaBoxOpen } from "react-icons/fa";
+import { AiOutlinePieChart, AiOutlineTeam } from "react-icons/ai";
+import { HiOutlineNewspaper } from "react-icons/hi2";
 
 const Button = ({ children, primary = false, large = false, ...props }) => (
   <button
@@ -109,7 +117,7 @@ const StatCard = ({ value, label }) => (
   </div>
 );
 
-export default function WebDevelopment() {
+export default function GraphicDesign() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -129,13 +137,14 @@ export default function WebDevelopment() {
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight animate-fade-in-up text-[#fff]">
               Elevate Your{" "}
-              <span className="text-[#7cda00]">Digital Presence</span>
+              <span className="text-[#7cda00]">Visual Identity</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 animate-fade-in-up animation-delay-300 text-[#fff]">
-              At Zenth Solution Provideo, we craft exceptional web experiences
-              that drive growth, enhance user engagement, and ensure your
-              long-term success in the digital world.
+              At Zenth Solution, we specialize in creating stunning graphic
+              designs that captivate audiences, enhance brand recognition, and
+              leave a lasting impression in the digital and physical world.
             </p>
+
             <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up animation-delay-600">
               <button class="buttonabc">Get Start</button>
             </div>
@@ -144,54 +153,54 @@ export default function WebDevelopment() {
       </header>
 
       <main className="mx-auto ">
-        <section id="services" className=" px-8">
+        <section id="services" className="px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl text-[#7cda00] font-bold mb-4">
-              Our Web Development Expertise
+              Our Graphic Design Expertise
             </h2>
             <p className="text-xl text-zinc-200 max-w-3xl mx-auto">
-              We leverage cutting-edge technologies and industry best practices
-              to deliver exceptional web solutions tailored to your unique
-              business needs.
+              We specialize in creating visually stunning designs that
+              communicate your brand's story, captivate audiences, and elevate
+              your business's identity.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: "Custom Web Applications",
-                icon: <Code className="h-16 w-16" />,
+                title: "Brand Identity Design",
+                icon: <AiOutlineTeam className="h-16 w-16" />,
                 description:
-                  "Tailored solutions to meet your unique business needs and challenges, built with scalability and performance in mind.",
+                  "Crafting unique and memorable brand identities, including logos, color palettes, and typography, tailored to your vision.",
               },
               {
-                title: "Responsive Design",
-                icon: <Laptop className="h-16 w-16" />,
+                title: "Marketing Collateral",
+                icon: <HiOutlineNewspaper className="h-16 w-16" />,
                 description:
-                  "Crafting visually stunning and functionally seamless experiences across all devices and screen sizes.",
+                  "Designing brochures, flyers, posters, and other marketing materials that leave a lasting impression on your audience.",
               },
               {
-                title: "User-Centric Approach",
-                icon: <Users className="h-16 w-16" />,
+                title: "Digital Design",
+                icon: <BiDesktop className="h-16 w-16" />,
                 description:
-                  "Creating intuitive interfaces that prioritize user experience, driving engagement and conversion rates.",
+                  "Creating engaging designs for social media, websites, and digital advertisements that enhance your online presence.",
               },
               {
-                title: "Performance Optimization",
-                icon: <Zap className="h-16 w-16" />,
+                title: "Illustrations and Infographics",
+                icon: <AiOutlinePieChart className="h-16 w-16" />,
                 description:
-                  "Boosting your website's speed and efficiency for better user retention and improved search engine rankings.",
+                  "Producing custom illustrations and infographics that simplify complex ideas and visually communicate your message.",
               },
               {
-                title: "Data-Driven Development",
-                icon: <BarChart className="h-16 w-16" />,
+                title: "Packaging Design",
+                icon: <FaBoxOpen className="h-16 w-16" />,
                 description:
-                  "Leveraging analytics and user insights to make informed decisions and drive measurable results.",
+                  "Designing eye-catching packaging that stands out on shelves and reflects the essence of your product.",
               },
               {
-                title: "Scalable Solutions",
-                icon: <Globe className="h-16 w-16" />,
+                title: "Presentation Design",
+                icon: <BsBarChart className="h-16 w-16" />,
                 description:
-                  "Building flexible and extensible websites that grow with your business and adapt to future technological advancements.",
+                  "Creating impactful and professional presentations that effectively convey your message and captivate your audience.",
               },
             ].map((item, index) => (
               <Card key={index} {...item} />
@@ -203,34 +212,39 @@ export default function WebDevelopment() {
           <div className="grid md:grid-cols-2 gap-12 items-center p-14">
             <div>
               <h2 className="text-4xl text-[#7cda00] font-bold mb-8">
-                Our Development Process
+                Our Graphic Design Process
               </h2>
               <ProcessStep
                 number="1"
-                title="Discovery and Planning"
-                description="We start by deeply understanding your business goals, target audience, and project requirements to create a comprehensive roadmap for success."
+                title="Discovery and Brainstorming"
+                description="We begin by understanding your brand's identity, goals, and target audience to conceptualize designs that resonate with your vision."
               />
               <ProcessStep
                 number="2"
-                title="Design and Prototyping"
-                description="Our expert designers create intuitive and visually appealing interfaces, ensuring a seamless user experience across all devices and platforms."
+                title="Concept Development"
+                description="Our team explores creative ideas and drafts initial concepts, ensuring alignment with your brand's tone and style."
               />
               <ProcessStep
                 number="3"
-                title="Development and Integration"
-                description="Our skilled developers bring the designs to life, integrating robust functionality and ensuring scalability to meet your current and future needs."
+                title="Design and Refinement"
+                description="We craft polished and visually stunning designs, incorporating your feedback to ensure the final output exceeds expectations."
+              />
+              <ProcessStep
+                number="4"
+                title="Delivery and Presentation"
+                description="We present the final designs in the required formats, ready for use in print, digital media, or other platforms."
               />
               <ProcessStep
                 number="5"
-                title="Deployment and Support"
-                description="We handle the launch process with care and provide ongoing support and maintenance to keep your website running smoothly and securely."
+                title="Post-Delivery Support"
+                description="We offer ongoing support for tweaks, updates, and additional design needs to ensure your visuals remain impactful and relevant."
               />
             </div>
-            <div className="relative h-[600px] rounded-lg overflow-hidden shadow-2xl ">
+            <div className="relative h-[600px] rounded-lg overflow-hidden shadow-2xl">
               <img
                 className="absolute inset-0 w-full h-full object-cover rounded-lg shadow-md"
                 src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="Development Process"
+                alt="Graphic Design Process"
               />
             </div>
           </div>
@@ -283,48 +297,49 @@ export default function WebDevelopment() {
             </p>
           </div>
           <div className="max-w-3xl mx-auto">
-            <Accordion title="What types of web development projects do you handle?">
+            <Accordion title="What types of graphic design services do you offer?">
               <p className="text-zinc-200 leading-relaxed">
-                We handle a wide range of web development projects, including
-                custom web applications, e-commerce platforms, content
-                management systems, progressive web apps, and more. Our team is
-                equipped to tackle projects of various scales and complexities,
-                from simple brochure websites to complex enterprise-level
-                applications.
+                We offer a wide range of graphic design services, including logo
+                design, branding, marketing materials, UI/UX design, packaging,
+                social media graphics, and more. Whether you need designs for
+                digital or print, we have you covered.
               </p>
             </Accordion>
-            <Accordion title="How long does a typical web development project take?">
+            <Accordion title="How long does a typical graphic design project take?">
               <p className="text-zinc-200 leading-relaxed">
-                The timeline for a web development project can vary depending on
-                its scope and complexity. A simple website might take 4-8 weeks,
-                while a complex web application could take several months. We'll
-                provide a detailed timeline during our initial consultation and
-                keep you updated throughout the development process.
+                The timeline depends on the complexity of the project. A basic
+                logo design might take 1-2 weeks, while more extensive projects
+                like branding or UI/UX design can take several weeks or months.
+                We'll provide an estimated timeline during the initial
+                consultation.
               </p>
             </Accordion>
-            <Accordion title="Do you provide ongoing support after the website is launched?">
+            <Accordion title="Do you provide revisions for the designs?">
               <p className="text-zinc-200 leading-relaxed">
-                Yes, we offer ongoing support and maintenance packages to ensure
-                your website continues to perform optimally. This includes
-                regular updates, security patches, performance monitoring, and
-                technical support. We're committed to the long-term success of
-                your digital presence.
+                Yes, we include a set number of revisions in all our design
+                packages to ensure the final result aligns with your vision.
+                Additional revisions can be discussed if needed.
               </p>
             </Accordion>
-            <Accordion title="How do you ensure the security of the websites you develop?">
+            <Accordion title="How do you ensure the designs align with our brand?">
               <p className="text-zinc-200 leading-relaxed">
-                Security is a top priority in our development process. We
-                implement best practices such as secure coding, regular security
-                audits, SSL certificates, and robust authentication systems. We
-                also keep all software and plugins up-to-date to protect against
-                vulnerabilities and provide ongoing monitoring for potential
-                security threats.
+                We start with a detailed consultation to understand your brand’s
+                values, target audience, and aesthetic preferences. Our team
+                ensures that every design element reflects your brand identity
+                and resonates with your audience.
+              </p>
+            </Accordion>
+            <Accordion title="What file formats will we receive for the final designs?">
+              <p className="text-zinc-200 leading-relaxed">
+                We deliver the final designs in various formats, including
+                vector files (AI, EPS, or SVG) and web-ready files (PNG, JPG, or
+                PDF), depending on your requirements. All files are optimized
+                for their intended use.
               </p>
             </Accordion>
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
