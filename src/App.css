@@ -1,21 +1,11 @@
-/**
-* Template Name: Impact - v1.2.0
-* Template URL: https://bootstrapmade.com/impact-bootstrap-business-website-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
-/*--------------------------------------------------------------
-# Set main reusable colors and fonts using CSS variables
-# Learn more about CSS variables at https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
---------------------------------------------------------------*/
-/* Fonts */
 :root {
   --font-1: "Poppins", sans-serif;
 
   --size-desktop: 15px;
   --size-mobile: 14px;
 }
+
+
 
 /* Colors */
 :root {
@@ -24,13 +14,100 @@
   --color-primary-2: #0d0d0d;
   --color-primary-3: #0b0b0b;
   --color-primary-4: #090909;
-  --color-primary-5: #050505;
+  --color-primary-5: #000000;
   --color-secondary: #7cda00;
   --color-secondary-hover: #5ea500;
   --color-third: #4409a3;
   --color-third-hover: #300575;
   --color-whatsapp: #00c00a;
   --color-whatsapp-hover: #00ac09;
+}
+
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+button.learn-more {
+  width: 12rem;
+  height: auto;
+}
+
+button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: var(--color-secondary);
+  border-radius: 1.625rem;
+}
+
+button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+
+button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+}
+
+button:hover .circle {
+  width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+  color: var(--color-primary-5);
 }
 
 /* Portfolio Section Styles */
@@ -704,7 +781,8 @@ section {
 --------------------------------------------------------------*/
 .header {
   z-index: 997;
-  height: 70px;
+  height: 90px;
+  padding: 0px 45px;
   background-color: #000;
 }
 
@@ -2933,7 +3011,9 @@ section {
 .hero {
   width: 100%;
   position: relative;
-  padding: 130px 0 100px 0;
+  padding: 130px 0px;
+  height: 100%;
+  background-color: #040404;
 }
 
 .hero h2 {
@@ -3140,6 +3220,16 @@ section {
 /*--------------------------------------------------------------
 # Hero-2 Call to Action
 --------------------------------------------------------------*/
+
+.hero,
+.hero * {
+  box-shadow: none !important;
+}
+
+.hero,
+.hero * {
+  border: none !important;
+}
 
 .hero-2 {
   width: 100%;
@@ -7237,6 +7327,7 @@ form.whatsapp-form {
   border-radius: 20px;
   transition: all 0.3s ease-out 0s;
   background-color: var(--color-primary-3);
+  height: 100%;
 }
 
 .about-append .icon-box .icon {
@@ -8336,7 +8427,7 @@ form.whatsapp-form {
 /* Contact Section */
 .contact-section {
   padding: 50px 0;
-  background-color: var(--color-primary-4);
+  background-color: var(--color-primary-5);
 }
 
 .container {
@@ -8512,4 +8603,292 @@ form.whatsapp-form {
 
 .demo-btn:hover {
   background-color: #0a4bb2;
+}
+
+/* Read More Button*/
+
+.ahm_btn {
+  line-height: 1;
+  text-decoration: none;
+  display: inline-flex;
+  border: none;
+  cursor: pointer;
+  margin: 10px 0px;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: var(--color-primary-1);
+  color: #fff;
+  border-radius: 10rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  padding-left: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: background-color 0.3s;
+}
+
+.ahm_btn__icon-wrapper {
+  flex-shrink: 0;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  color: var(--color-primary-5);
+  background-color: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.ahm_btn:hover {
+  background-color: var(--color-secondary);
+}
+
+.ahm_btn:hover .ahm_btn__icon-wrapper {
+  color: #000;
+}
+
+.ahm_btn__icon-svg--copy {
+  position: absolute;
+  transform: translate(-150%, 150%);
+}
+
+.ahm_btn:hover .ahm_btn__icon-svg:first-child {
+  transition: transform 0.3s ease-in-out;
+  transform: translate(150%, -150%);
+}
+
+.ahm_btn:hover .ahm_btn__icon-svg--copy {
+  transition: transform 0.3s ease-in-out 0.1s;
+  transform: translate(0);
+}
+
+/* Learn More For Services */
+
+.btn-shine {
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(
+    to right,
+    var(--color-secondary) 0,
+    var(--color-secondary) 10%,
+    var(--color-secondary-hover) 20%
+  );
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s infinite linear;
+  animation-fill-mode: forwards;
+  -webkit-text-size-adjust: none;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+@-moz-keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+@-webkit-keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+@-o-keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+
+/* Close Button */
+
+/* inspired form gumroad website */
+
+.button {
+  --bg: var(--color-third);
+  --hover-bg: var(var(--color-secondary));
+  --hover-text: #fff;
+  color: #fff;
+  cursor: pointer;
+  
+  display: flex; /* Enables flexbox */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  
+  border: 1px solid var(--bg);
+  width: 100%;
+  border-radius: 4px;
+  padding: 0.8em 2em;
+  background: var(--bg);
+  transition: 0.2s;
+  text-align: center; /* Ensures compatibility */
+}
+
+.button:hover {
+  color: var(--hover-text);
+  transform: translate(-0.25rem, -0.25rem);
+  background: var(--hover-bg);
+  box-shadow: 0.25rem 0.25rem var(--bg);
+}
+
+.button:active {
+  transform: translate(0);
+  box-shadow: none;
+}
+
+/* Social Icon */
+
+.Btn {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  /* overflow: hidden; */
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.svgContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  backdrop-filter: blur(0px);
+  letter-spacing: 0.8px;
+  border-radius: 10px;
+  transition: all .3s;
+  border: 1px solid rgba(156, 156, 156, 0.466);
+}
+
+.BG {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #181818;
+  z-index: -1;
+  border-radius: 10px;
+  pointer-events: none;
+  transition: all .3s;
+}
+
+.Btn:hover .BG {
+  transform: rotate(35deg);
+  transform-origin: bottom;
+}
+
+.Btn:hover .svgContainer {
+  background-color: rgba(156, 156, 156, 0.466);
+  backdrop-filter: blur(4px);
+}
+
+.cunsulBtn {
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 7px;
+  border: 1px solid var(--color-secondary-hover);
+  font-size: 14px;
+  font-weight: 600;
+  background: transparent;
+  color: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.cunsulBtn:hover {background: rgb(124, 218, 0); /* Green color */
+  box-shadow: 0 0 30px 5px rgba(0, 214, 88, 0.815); /* Greenish box-shadow */
+  
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.cunsulBtn:hover::before {
+  -webkit-animation: sh02 0.5s 0s linear;
+  -moz-animation: sh02 0.5s 0s linear;
+  animation: sh02 0.5s 0s linear;
+}
+
+.cunsulBtn::before {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+.cunsulBtn:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
 }

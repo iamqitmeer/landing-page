@@ -108,12 +108,19 @@ function PortfolioSection() {
               <h3 className="modal-title">{selectedProject.title}</h3>
               {/* <p className="modal-category">{selectedProject.category}</p> */}
               <p className="modal-description">{selectedProject.description}</p>
-              <button
+              {/* <button
                 className="close-button"
-                onClick={() => setSelectedProject(null)}
               >
                 Close
-              </button>
+              </button> */}
+              <div className="full-btn">
+                <button
+                  onClick={() => setSelectedProject(null)}
+                  className="button"
+                >
+                  Close
+                </button>
+              </div>
             </motion.div>
           </motion.div>
         )}
