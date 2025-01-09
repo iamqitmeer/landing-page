@@ -21,7 +21,9 @@
   --color-whatsapp-hover: #00ac09;
 }
 
-
+.no-hover-bg:hover {
+  background-color: transparent !important; /* Override any hover background styles */
+}
 
 
 button {

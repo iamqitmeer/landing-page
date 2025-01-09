@@ -21,28 +21,49 @@ const navLinks = [
   { name: "About", href: "/about" },
   {
     name: "Services",
-    href: "/services",
+    href: "#services",
     dropdown: [
       {
         name: "Web Development",
         href: "/services/web-development",
-        description: "Create stunning, responsive websites",
+        description:
+          "Build a powerful online presence for your business with responsive and scalable web development services.",
       },
       {
         name: "Mobile Apps",
-        href: "/services/mobile-apps",
-        description: "Build powerful iOS and Android applications",
+        href: "/services/app-development",
+        description:
+          "Create seamless mobile experiences with custom mobile apps tailored to your business goals.",
       },
       {
-        name: "Cloud Solutions",
-        href: "/services/cloud-solutions",
-        description: "Scalable and secure cloud infrastructure",
+        name: "Graphic Design",
+        href: "/services/graphic-design",
+        description:
+          "Enhance your brand’s visual identity with stunning graphic designs that engage and inspire your audience.",
+      },
+      {
+        name: "UI/UX Design",
+        href: "/services/ui-ux-design",
+        description:
+          "Create intuitive, user-friendly interfaces that enhance user experience and drive conversions.",
+      },
+      {
+        name: "Digital Marketing",
+        href: "/services/digital-marketing",
+        description:
+          "Grow your brand's reach and visibility with tailored digital marketing strategies that drive results.",
+      },
+      {
+        name: "Blockchain",
+        href: "/services/blockchain",
+        description:
+          "Leverage blockchain technology for secure, transparent solutions that enhance business processes.",
       },
     ],
   },
-  { name: "Why Us", href: "/why-us" },
-  { name: "Portfolio", href: "/portfolio" },
-  { name: "Contact Us", href: "/contact" },
+  { name: "Why Us", href: "#boxes-hero" },
+  { name: "Portfolio", href: "#portfolio" },
+  { name: "Contact Us", href: "#contact" },
 ];
 
 export default function Header() {
@@ -53,7 +74,7 @@ export default function Header() {
         <MobileNav />
         <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
           <div className="w-full flex-1 md:w-auto md:flex-none">
-          <NavLink to="/client/form">
+            <NavLink to="/client/form">
               <li className="login-nav">
                 <button className="cunsulBtn">Free Consultation </button>
               </li>
@@ -67,10 +88,10 @@ export default function Header() {
 
 function MainNav() {
   return (
-    <div className="mr-4 hidden md:flex">
+    <div className="mr-4 hidden md:flex p-20">
       <NavLink href="/" className="mr-6 flex items-center space-x-2">
-        <span className="hidden text-white font-bold sm:inline-block">
-          Zenth Solutions
+        <span className="hidden text-[#7cda00] text-3xl font-black  sm:inline-block">
+          Zenth
         </span>
       </NavLink>
       <NavigationMenu>
@@ -95,7 +116,7 @@ function MainNav() {
               )}
               {link.dropdown && (
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 bg-zinc-800/80 backdrop-blur-lg rounded-lg shadow-md md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                  <ul className="grid w-[400px] gap-3 p-4 bg-zinc-950 hover:bg-zinc-950 backdrop-blur-lg rounded-lg shadow-md md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                     {link.dropdown.map((item) => (
                       <ListItem
                         key={item.name}
@@ -128,7 +149,10 @@ function MobileNav() {
           <span className="sr-only">Toggle Menu</span>
         </Button>
       </SheetTrigger>
-      <SheetContent side="left" className="pr-0 bg-zinc-900/90 backdrop-blur-lg">
+      <SheetContent
+        side="left"
+        className="pr-0 bg-zinc-900/90 backdrop-blur-lg"
+      >
         <MobileLink
           href="/"
           className="flex items-center text-white"
@@ -169,10 +193,10 @@ const ListItem = React.forwardRef(
     return (
       <li>
         <NavigationMenuLink asChild>
-          <a
+          <NavLink
             ref={ref}
             className={cn(
-              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors bg-zinc-800 text-white hover:bg-zinc-700 hover:text-white focus:bg-zinc-700 focus:text-white",
+              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors bg-zinc-900 text-white hover:bg-zinc-950 hover:text-white ",
               className
             )}
             {...props}
@@ -181,7 +205,7 @@ const ListItem = React.forwardRef(
             <p className="line-clamp-2 text-sm leading-snug text-zinc-400">
               {children}
             </p>
-          </a>
+          </NavLink>
         </NavigationMenuLink>
       </li>
     );
