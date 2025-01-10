@@ -558,7 +558,7 @@ body {
 }
 
 ::selection {
-  background-color: var(--color-third);
+  background-color: #57d11057;
   color: #fff;
 }
 ::-moz-selection {
@@ -8940,4 +8940,8 @@ form.whatsapp-form {
 }
 .buttonabc:active {
   filter: hue-rotate(250deg);
+}
+
+.NavigationMenuContent {
+  border: 1px solid black !important; /* Dropdown ka border black */
 }

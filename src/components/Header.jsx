@@ -69,7 +69,7 @@ const navLinks = [
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full bg-zinc-950 backdrop-blur-lg shadow-lg">
-      <div className="container flex h-20 max-w-screen-2xl items-center">
+      <div className="container mx-auto flex h-20 items-center px-4">
         <MainNav />
         <MobileNav />
         <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
@@ -88,11 +88,9 @@ export default function Header() {
 
 function MainNav() {
   return (
-    <div className="mr-4 hidden md:flex p-20">
-      <NavLink href="/" className="mr-6 flex items-center space-x-2">
-        <span className="hidden text-[#7cda00] text-3xl font-black  sm:inline-block">
-          Zenth
-        </span>
+    <div className="hidden md:flex items-center space-x-6">
+      <NavLink href="/" className="flex items-center space-x-2">
+        <span className="text-[#7cda00] text-3xl font-black">Zenth</span>
       </NavLink>
       <NavigationMenu>
         <NavigationMenuList>
@@ -116,7 +114,7 @@ function MainNav() {
               )}
               {link.dropdown && (
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 bg-zinc-950 hover:bg-zinc-950 backdrop-blur-lg rounded-lg shadow-md md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                  <ul className="grid w-[400px] gap-3 p-4 bg-zinc-950 hover:bg-zinc-950 backdrop-blur-lg rounded-lg shadow-md border-none md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                     {link.dropdown.map((item) => (
                       <ListItem
                         key={item.name}

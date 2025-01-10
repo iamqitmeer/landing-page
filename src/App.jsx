@@ -11,6 +11,8 @@ import Blockchain from "./Screen/Blockchain";
 import AIML from "./Screen/AIML";
 import SocialMediaManagement from "./Screen/SocialMediaManagement";
 import ConsultationForm from "./Screen/CosultationForm";
+import "./App.css";
+import "./index.css";
 
 function App() {
   const router = createBrowserRouter([
