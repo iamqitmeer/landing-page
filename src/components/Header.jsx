@@ -16,6 +16,7 @@ import {
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { NavLink, useNavigate } from "react-router";
 import { cn } from "@/lib/utils";
+import logo from "../assets/img/logo.png";
 
 const navLinks = [
   { name: "About", href: "/about" },
@@ -76,7 +77,7 @@ export default function Header() {
           <div className="w-full flex-1 md:w-auto md:flex-none">
             <NavLink to="/client/form">
               <li className="login-nav">
-                <button className="cunsulBtn">Free Consultation </button>
+                <button className="cunsulBtn">Free Consultation</button>
               </li>
             </NavLink>
           </div>
@@ -90,7 +91,7 @@ function MainNav() {
   return (
     <div className="hidden md:flex items-center space-x-6">
       <NavLink href="/" className="flex items-center space-x-2">
-        <span className="text-[#7cda00] text-3xl font-black">Zenth</span>
+        <img src={logo} className="h-10" />
       </NavLink>
       <NavigationMenu>
         <NavigationMenuList>
@@ -114,7 +115,7 @@ function MainNav() {
               )}
               {link.dropdown && (
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 bg-zinc-950 hover:bg-zinc-950 backdrop-blur-lg rounded-lg shadow-md border-none md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                  <ul className="grid w-[400px] gap-4 p-4 bg-zinc-950 rounded-lg shadow-md md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                     {link.dropdown.map((item) => (
                       <ListItem
                         key={item.name}
@@ -194,7 +195,7 @@ const ListItem = React.forwardRef(
           <NavLink
             ref={ref}
             className={cn(
-              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors bg-zinc-900 text-white hover:bg-zinc-950 hover:text-white ",
+              "block select-none space-y-1 rounded-md p-3 leading-none no-underline transition-colors bg-zinc-900 text-white hover:bg-zinc-950 hover:text-white",
               className
             )}
             {...props}
@@ -225,5 +226,5 @@ function MobileLink({ href, onOpenChange, className, children, ...props }) {
     >
       {children}
     </NavLink>
-  );
+  );
 }

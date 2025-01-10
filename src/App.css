@@ -238,6 +238,7 @@ button:hover .button-text {
     font-size: 1.25rem;
     line-height: 1.4;
     color: #fff;
+    padding-bottom: 10px;
   }
 
   .modal-description {
@@ -8757,6 +8758,7 @@ form.whatsapp-form {
   padding: 0.8em 2em;
   background: var(--bg);
   transition: 0.2s;
+  margin-top: 14px;
   text-align: center; /* Ensures compatibility */
 }
 

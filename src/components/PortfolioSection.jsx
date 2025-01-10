@@ -1,47 +1,42 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import "../App.css";
 
 function PortfolioSection() {
   const projects = [
     {
       id: 1,
-      title: "Neon Dreams",
-      category: "Web Design",
-      image:
-        "https://mir-s3-cdn-cf.behance.net/projects/404/2cc135185656637.Y3JvcCwyMzAxLDE4MDAsNTEsMA.png",
+      title: "Athina AI",
+      category: "MERN Stack",
+      image: "https://i.ibb.co/YQfZDzy/Image-1.png",
       description:
-        "A vibrant e-commerce platform with a neon-inspired design, featuring smooth animations and an intuitive user interface.",
+        "Athina AI is a cutting-edge web application crafted with MERN, integrating advanced animation libraries like GSAP and Framer Motion to deliver a visually stunning and interactive user experience. The project showcases seamless transitions, dynamic motion effects, and an intuitive design that engages users effectively. Athina AI emphasizes responsiveness and performance, leveraging modern web technologies to ensure fast loading speeds and cross-device compatibility.",
       demoLink: "https://www.example.com/neon-dreams",
     },
     {
       id: 2,
-      title: "EcoTrack",
-      category: "Mobile App",
-      image:
-        "https://i.pinimg.com/736x/cf/ea/30/cfea305ef815385ef069b123625ee2c0.jpg",
+      title: "Paa.ge AI",
+      category: "Next.js",
+      image: "https://i.ibb.co/cD1TVNt/Image-2.png",
       description:
-        "An innovative app helping users reduce their carbon footprint through daily challenges and real-time tracking.",
+        "Paa.ge AI is an innovative link-in-bio platform developed using Next.js, designed to empower creators, entrepreneurs, and businesses. This platform allows users to share links, sell products, and showcase their best work in one seamless, professional, and free solution. The application leverages the power of Framer Motion to deliver smooth animations and an engaging user experience.",
       demoLink: "https://www.example.com/eco-track",
     },
     {
       id: 3,
-      title: "MindfulAI",
-      category: "AI / Machine Learning",
-      image:
-        "https://mir-s3-cdn-cf.behance.net/project_modules/hd/4f9e8e139967569.6239762238d15.png",
+      title: "Zipy AI",
+      category: "Next.js",
+      image: "https://i.ibb.co/wdLmxFj/Image-3.png",
       description:
-        "An AI-powered meditation assistant that adapts to users' emotional states and provides personalized mindfulness exercises.",
+        "Zipy AI is an advanced debugging tool built with Next.js and enhanced using Framer Motion for smooth animations and dynamic user interfaces. It provides AI-powered mobile session replays to track user behavior and identify issues efficiently. Features like Oopsie Bugs detect and log UI/UX errors, offering actionable insights with video snippets and detailed diagnostics.",
       demoLink: "https://www.example.com/mindful-ai",
     },
     {
       id: 4,
-      title: "CryptoVerse",
-      category: "Blockchain",
-      image:
-        "https://mir-s3-cdn-cf.behance.net/projects/404/4fe0b2197781717.Y3JvcCwxNDQwLDExMjYsMCw4NQ.png",
+      title: "Index",
+      category: "MERN Stack",
+      image: "https://i.ibb.co/t8rM4bg/Image-4.png",
       description:
-        "A comprehensive cryptocurrency dashboard with real-time market data, predictive analytics, and portfolio management tools.",
+        "Index is a MERN stack-based project designed to streamline personal task management through AI-powered automation. The project utilizes Framer Motion for dynamic animations, along with GSAP and Locomotive Scroll for smooth transitions and engaging interactions. With features like task reminders, calendar syncing, and email management.",
       demoLink: "https://www.example.com/crypto-verse",
     },
   ];
@@ -49,7 +44,7 @@ function PortfolioSection() {
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
-    <section id="portfolio" className="portfolio-section xl:px-20" >
+    <section id="portfolio" className="portfolio-section xl:px-20">
       <div className="container">
         <header className="section-header portfolio-header">
           <p>Our Portfolio</p>

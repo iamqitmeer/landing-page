@@ -18,7 +18,8 @@ function AboutSection() {
               enhance user experiences, and ensure long-term success across
               websites, mobile apps, and digital marketing. With a focus on
               innovation and quality, we are committed to delivering results
-              that matter.
+              that matter. <br />
+              <br />
             </p>
             <p className="clamp">
               Whether you're a startup or an established business, we work
@@ -26,9 +27,14 @@ function AboutSection() {
               tailored strategies that help you reach your goals. From
               developing user-friendly websites and mobile apps to implementing
               effective digital marketing campaigns, we’re here to bring your
-              vision to life and support your growth every step of the way.
+              vision to life and support your growth every step of the way.{" "}
+              <br />
             </p>
-            <button href="#" className="ahm_btn" style={{ "--clr": "#7808d0" }}>
+            <button
+              href="#"
+              className="ahm_btn  mt-4"
+              style={{ "--clr": "#7808d0" }}
+            >
               <span className="ahm_btn__icon-wrapper">
                 <svg
                   viewBox="0 0 14 15"
@@ -59,8 +65,8 @@ function AboutSection() {
               Read More{" "}
             </button>
           </div>
-          <div className="col-xl-6">
-            <div className="row gy-2 gx-2 gy-lg-3 gx-lg-3 icon-boxes">
+          <div className="col-xl-6 ">
+            <div className="row gy-2 gx-2 gy-lg-3 gx-lg-3 icon-boxes mt-6">
               <div className="col-md-6 col-6" data-aos="fade-in">
                 <div className="icon-box">
                   <div className="icon">

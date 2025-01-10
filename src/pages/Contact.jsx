@@ -1,25 +1,28 @@
 import React, { useRef } from "react";
 import aboutImage from "../assets/img/about/1.png";
+import emailjs from '@emailjs/browser';
 
 function Contact() {
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+  
     emailjs
       .sendForm("service_hap4omw", "template_1r123vt", form.current, {
-        publicKey: "sq6oT6-Gf52_hmzwP",
+        publicKey: "jY16U1C9LFZ03obOu",  // Use the new public key here
       })
       .then(
         () => {
-          alert("Email has been Send Succesfully");
+          alert("Email has been Sent Successfully");
         },
         (error) => {
           console.log("Something went wrong... ", error.text);
         }
       );
   };
+  
+  
   return (
     <section id="contact" className="contact-section  xl:px-20">
       <div className="container">
