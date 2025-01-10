@@ -145,7 +145,7 @@ function MobileNav() {
           className="mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
         >
           <Menu className="h-5 w-5 text-white" />
-          <span className="sr-only">Toggle Menu</span>
+          {/* <span className="sr-only">Toggle Menu</span> */}
         </Button>
       </SheetTrigger>
       <SheetContent
@@ -157,7 +157,7 @@ function MobileNav() {
           className="flex items-center text-white"
           onOpenChange={() => {}}
         >
-          <span className="font-bold">Zenth Solutions</span>
+          <img src={logo} className="h-10 ml-4" />
         </MobileLink>
         <div className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
           <div className="flex flex-col space-y-3">
@@ -175,11 +175,15 @@ function MobileNav() {
             )}
           </div>
           <div className="mt-4">
-            <Button asChild>
-              <NavLink href="/consultation" className="text-white">
-                Free Consultation
-              </NavLink>
-            </Button>
+            <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
+              <div className="w-full flex-1 md:w-auto md:flex-none">
+                <NavLink to="/client/form">
+                  <li className="login-nav">
+                    <button className="cunsulBtn">Free Consultation</button>
+                  </li>
+                </NavLink>
+              </div>
+            </div>
           </div>
         </div>
       </SheetContent>
@@ -226,5 +230,5 @@ function MobileLink({ href, onOpenChange, className, children, ...props }) {
     >
       {children}
     </NavLink>
-  );
+  );
 }
